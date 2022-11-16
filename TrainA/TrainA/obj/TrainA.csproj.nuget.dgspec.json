@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\source\\repos\\TrainA\\TrainA\\TrainA.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\TrainA\\TrainA\\TrainA\\TrainA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\source\\repos\\TrainA\\TrainA\\TrainA.csproj": {
+    "C:\\Users\\Admin\\Desktop\\TrainA\\TrainA\\TrainA\\TrainA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\TrainA\\TrainA\\TrainA.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\TrainA\\TrainA\\TrainA\\TrainA.csproj",
         "projectName": "TrainA",
-        "projectPath": "C:\\Users\\Admin\\source\\repos\\TrainA\\TrainA\\TrainA.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\TrainA\\TrainA\\TrainA\\TrainA.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\source\\repos\\TrainA\\TrainA\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\TrainA\\TrainA\\TrainA\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.31, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
