@@ -21,7 +21,7 @@ namespace TrainA.Entities
         public virtual ViTri VT { get; set; }
         public int MaPhongBan { get; set; }
         public virtual PhongBan PB { get; set; }
-
+        public virtual ICollection<DuAn> DuAns { get; set; }
 
     }
 }

@@ -7,12 +7,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TrainA.Entities
 {
-    public class ViTri
+    public class DuAn
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        public int MaVT { get; set; }
-        public string TenVT { get; set; }
+        public int MaDA { get; set; }
+        public string TenDA { get; set; }
+        public string NoiDung { get; set; }
+        public DateTime NgayDatDau { get; set; }
+        public DateTime NgayKetThuc { get; set; }
         public virtual ICollection<NhanVien> NhanViens { get; set; }
     }
 }
