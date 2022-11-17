@@ -7,9 +7,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TrainA.Entities
 {
-    public class KiNang
+    public class KienThuc
     {
-        public KiNang()
+        public KienThuc()
         {
             NhanViens = new HashSet<NhanVien>();
             PhongBans = new HashSet<PhongBan>();
@@ -18,8 +18,8 @@ namespace TrainA.Entities
         }
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        public int MaKN { get; set; }
-        public string TenKN { get; set; }
+        public int MaKT { get; set; }
+        public string TenKT { get; set; }
         public virtual ICollection<NhanVien> NhanViens { get; set; }
         public virtual ICollection<PhongBan> PhongBans { get; set; }
         public virtual ICollection<DuAn> DuAns { get; set; }

@@ -9,6 +9,12 @@ namespace TrainA.Entities
 {
     public class DuAn
     {
+        public DuAn()
+        {
+            NhanViens = new HashSet<NhanVien>();
+            KiNangs = new HashSet<KiNang>();
+            KienThucs = new HashSet<KienThuc>();
+        }
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int MaDA { get; set; }
@@ -17,5 +23,7 @@ namespace TrainA.Entities
         public DateTime NgayDatDau { get; set; }
         public DateTime NgayKetThuc { get; set; }
         public virtual ICollection<NhanVien> NhanViens { get; set; }
+        public virtual ICollection<KiNang> KiNangs { get; set; }
+        public virtual ICollection<KienThuc> KienThucs { get; set; }
     }
 }
