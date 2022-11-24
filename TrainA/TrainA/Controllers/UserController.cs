@@ -15,12 +15,12 @@ namespace TrainA.Controllers
     {
         private readonly AppSetting _appSettings;
 
-        [HttpPost("Login")]
-        public IActionResult Validate(LoginModel model)
+/*        [HttpPost("Login")]
+        public IActionResult Validate(LoginModel model)*/
     }
 
-    private string GenerateToken(NhanVien nhanVien)
+/*    private string GenerateToken(NhanVien nhanVien)
     {
         var jwtTokenHandler = new JwtSecurityTokenHandler();
-    }
+    }*/
 }
