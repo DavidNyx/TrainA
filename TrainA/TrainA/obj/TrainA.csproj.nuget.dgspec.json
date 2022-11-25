@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HCMUS\\PTUDHTTT\\TrainA\\TrainA\\TrainA\\TrainA.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\TrainA\\TrainA\\TrainA\\TrainA.csproj": {}
   },
   "projects": {
-    "D:\\HCMUS\\PTUDHTTT\\TrainA\\TrainA\\TrainA\\TrainA.csproj": {
+    "C:\\Users\\Admin\\Desktop\\TrainA\\TrainA\\TrainA\\TrainA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HCMUS\\PTUDHTTT\\TrainA\\TrainA\\TrainA\\TrainA.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\TrainA\\TrainA\\TrainA\\TrainA.csproj",
         "projectName": "TrainA",
-        "projectPath": "D:\\HCMUS\\PTUDHTTT\\TrainA\\TrainA\\TrainA\\TrainA.csproj",
-        "packagesPath": "C:\\Users\\KyeDee\\.nuget\\packages\\",
-        "outputPath": "D:\\HCMUS\\PTUDHTTT\\TrainA\\TrainA\\TrainA\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\TrainA\\TrainA\\TrainA\\TrainA.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\TrainA\\TrainA\\TrainA\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\KyeDee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

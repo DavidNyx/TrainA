@@ -14,6 +14,8 @@ namespace TrainA.Entities
             NhanViens = new HashSet<NhanVien>();
             KiNangs = new HashSet<KiNang>();
             KienThucs = new HashSet<KienThuc>();
+            KhoaHocs = new HashSet<KhoaHoc>();
+
         }
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
@@ -22,5 +24,7 @@ namespace TrainA.Entities
         public virtual ICollection<NhanVien> NhanViens { get; set; }
         public virtual ICollection<KiNang> KiNangs { get; set; }
         public virtual ICollection<KienThuc> KienThucs { get; set; }
+        public virtual ICollection<KhoaHoc> KhoaHocs { get; set; }
+
     }
 }
