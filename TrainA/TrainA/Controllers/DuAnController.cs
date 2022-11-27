@@ -12,6 +12,7 @@ namespace TrainA.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    //[Microsoft.AspNetCore.Cors.EnableCors(origins: '*', headers: '*', HttpMethods:'*')]
     public class DuAnController : ControllerBase
     {
         private readonly IConfiguration _configuration;
@@ -42,7 +43,7 @@ namespace TrainA.Controllers
                     myCon.Close();
                 }
             }
-
+            //Console.WriteLine(new JsonResult(table));
             return new JsonResult(table);
         }
     }

@@ -36,8 +36,8 @@ namespace TrainA
                 c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             });
 
-            var secretKey = Configuration["AppSettings:SecretKey"];
-            var secretKeyBytes = Encoding.UTF8.GetBytes(secretKey);
+            //var secretKey = Configuration["AppSettings:SecretKey"];
+            //var secretKeyBytes = Encoding.UTF8.GetBytes(secretKey);
 
             //JSON Serializer
             services.AddControllersWithViews().AddNewtonsoftJson(options =>
@@ -46,7 +46,7 @@ namespace TrainA
                 = new DefaultContractResolver());
             services.AddControllers();
 
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            /*services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(opt =>
                 {
                     opt.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
@@ -59,7 +59,7 @@ namespace TrainA
 
                         ClockSkew = TimeSpan.Zero
                     };
-                });
+                });*/
 
 
         }
@@ -79,6 +79,8 @@ namespace TrainA
             app.UseAuthentication();
 
             app.UseAuthorization();
+
+            app.UseCors("AllowOrigin");
 
             app.UseEndpoints(endpoints =>
             {

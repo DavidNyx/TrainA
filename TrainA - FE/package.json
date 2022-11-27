@@ -1,0 +1,24 @@
+{
+  "name": "trainayy",
+  "version": "9.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server"
+  },
+  "keywords": [],
+  "author": "TrainA team",
+  "license": "ISC",
+  "description": "E-learning website",
+  "repository": {
+    "type": "git",
+    "url": "TrainA"
+  },
+  "dependencies": {
+    "ajax": "^0.0.4",
+    "jquery": "^3.6.1"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
