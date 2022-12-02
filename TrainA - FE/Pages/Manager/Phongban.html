@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="icon" type="image/png" href="images/logo.jpg"/>
 </head>
 <body>
     <div class="nav_bar">
         <ul>
-            <li><a href="#">Khóa học</a></li>
-            <li><a href="#">Vị trí</a></li>
-            <li><a href="#">Dự án</a></li>
-            <li><a href="#">Phòng ban</a></li>
-            <li><a href="#">Users</a></li>    
+          <li><a href="Taokhoahoc.html">Khóa học</a></li>
+          <li><a href="Vitricongviec.html">Vị trí</a></li>
+          <li><a href="Duan.html">Dự án</a></li>
+          <li><a href="Phongban.html">Phòng ban</a></li>
+          <li><a href="Taokhoahoc.html">Tạo lớp học</a></li>      
         </ul>
         <div class="profile">
             <a href="#"class="dropbtn"><i class="fa fa-regular fa-user"></i>
@@ -32,100 +33,198 @@
     </div>
 
 
-    <div class="project_room_table_list">
-        <h1>Danh sách phòng ban</h1>
-        <table>  
-            <tr>
-            <th>Mã phòng ban</th>
-            <th>Tên phòng ban</th>
-          </tr>
-          <tr>
-            <td>V001</td>
-            <td>Roland Mendel</td>
-          </tr>
-          <tr>
-            <td>V002</td>
-            <td>Roland Mendel</td>
-          </tr>
-          <tr>
-            <td>V003</td>
-            <td>Roland Mendel</td>
-          </tr>
-          <tr>
-            <td>V004</td>
-            <td>Roland Mendel</td>
-          </tr>
-          <tr>
-            <td>V005</td>
-            <td>Roland Mendel</td>
-          </tr>
-          <tr>
-            <td>V006</td>
-            <td>Roland Mendel</td>
-          </tr>
-          <tr>
-            <td>V007</td>
-            <td>Roland Mendel</td>
-          </tr>
-          <tr>
-            <td>V008</td>
-            <td>Roland Mendel</td>
-          </tr>
-          <tr>
-            <td>V009</td>
-            <td>Roland Mendel</td>
-          </tr>
-        </table>
+    <div class="project_table_list">
+			<h1>Danh sách phòng ban</h1>
+			<div class="search_bar_project_table_list">
+				<input type="text" placeholder="Enter key">
+				<button type="submit"><i class="fa fa-search"></i></button>
+			</div>
+			<div class="drop_down_ky_nang">
+				<p>Kỹ năng</p>
+				<form action="#">
+					<select name="ky_nang" id="ky_nang">
+					  <option value="Excel">Excel</option>
+					  <option value="Word">Word</option>
+					  <option value="Access">Access</option>
+					  <option value="Soft_skill">Soft skill</option>
+					</select>
+			  </form>
+			</div>
+			<div class="drop_down_kien_thuc">
+				<p>Kiến thức</p>
+				<form action="#">
+					<select name="kien_thuc" id="kien_thuc">
+					  <option value="C++">C++</option>
+					  <option value="Python">Python</option>
+					  <option value="Java">Java</option>
+					  <option value="C#">C#</option>
+					</select>
+			  </form>
+			</div>
+			<div class="project_list">
+			<table id="project_list">  
+			<tr>
+				<th>Mã phòng ban</th>
+				<th>Tên phòng ban</th>
+			</tr>
+			<script src="Function\getlistDuAn.js"></script>
+			</table>
+			</div>
+		</div>
+	    <div class="project_info">
+			<h2>Thông tin chi tiết</h2>
+			<h3>Tên phòng ban: </h3>
+      <h5>Phòng kế toán</h5>
+      <h4>Mô tả</h4>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+			<div class="kien_thuc_editable_table">
+				<table>
+					<tr>
+						<th>Kiến thức <button class="add_kien_thuc_btn" href="#" id="pop_up_add_kienthuc" onclick="openForm()"> <i class="material-symbols-outlined">
+							edit_note
+						</i></button>
+						<div class="popup2" id="form1">
+							<p>Thêm kiến thức</p>
+							<div class="pop_up_drop_down_kien_thuc">
+								<form action="#">
+									<p>Kiến thức</p>
+									<select name="kien_thuc" id="kien_thuc_form">
+									<option value="Empty"></option>
+									  <option value="C++">C++</option>
+									  <option value="Python">Python</option>
+									  <option value="Java">Java</option>
+									  <option value="C#">C#</option>
+									</select>
+							  </form>
+							</div>
+							<button class="add_btn">Thêm</button>
+							<button class="cancel_btn" id="cancel" onclick="closeForm()">Hủy</button>
+				
+						</div>
+						  </th>
+						
+					</tr>
+					<tr>
+						<td>C++ <span id="icon1" class="material-symbols-outlined">
+							close
+							</span></td>
+					</tr>
+					<tr>
+						<td>Python<span id="icon2" class="material-symbols-outlined">
+							close
+							</span></td>
 
-    </div>
-    <div class="project_info">
-        <h2>Thông tin chi tiết</h2>
-        <h3> Tên dự án</h3>
-        <p> tên dự án</p>
-        <div class="date_double_same_row">
-            <h3> Ngày bắt đầu</h3>
-            <p>1/1/2001</p>
-            <h3> Ngày kết thúc</h3>
-            <p>1/2/2001</p>
-        </div>
-        <h3>Nội dung</h3>
-        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-        </p>
-        <h3>kỹ năng</h3>
-        <p>Kỹ năng tin học văn phòng, kỹ năng vận hành máy móc, kỹ năng giao tiếp, kỹ năng đàm phán, kỹ năng thuyết trình</p>
-        <h3>kiến thức</h3>
-        <p>kiến thức 1</p>
-    </div>
+					</tr>
+					<tr>
+						<td>Java<span id="icon3"class="material-symbols-outlined">
+							close
+							</span></td>
+					</tr>
+					<tr>
+						<td>C#<span id="icon4" class="material-symbols-outlined">
+							close
+							</span></td>
+					</tr>
+				</table>
+			</div>
+			<div class="ky_nang_editable_table">
+				<table>
+					<tr>
+						<th>Kỹ năng <button class="add_ky_nang_btn" href="#"id="pop_up_add_kynang" onclick="openForm1()"> <i class="material-symbols-outlined">
+							edit_note
+						</i></button><div class="popup3" id="form2">
+							<p>Thêm kỹ năng</p>
+							<div class="pop_up_drop_down_ky_nang">
+								<form action="#">
+									<p>Kỹ năng</p>
+									<select name="ky_nang" id="ky_nang_form">
+									<option value="empty"></option>
+									  <option value="excel">Excel</option>
+									  <option value="word">Word</option>
+									  <option value="power_point">Power_point</option>
+									  <option value="access">Access</option>
+									</select>
+							  </form>
+							</div>
+							<button class="add_btn">Thêm</button>
+							<button class="cancel_btn" id="cancel" onclick="closeForm1()">Hủy</button>
+				
+						</div>
+						  </div>
+					</th>
+					</tr>
+					<tr>
+						<td>Excel <span id="icon5" class="material-symbols-outlined">
+							close
+							</span></td>
+					</tr>
+					<tr>
+						<td>Word <span id="icon6" class="material-symbols-outlined">
+							close
+							</span></td>
+					</tr>
+					<tr>
+						<td>Access <span id="icon7" class="material-symbols-outlined">
+							close
+							</span></td>
+					</tr>
+					<tr>
+						<td>Power point <span id="icon8" class="material-symbols-outlined">
+							close
+							</span></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		
+		<div class="Member_table_list">
+			<h1>Danh sách nhân viên</h1>
+			<table>  
+				<tr>
+				<th>Mã nhân viên</th>
+				<th>Tên nhân viên</th>
+				<th>Vị trí công việc</th>
+			  </tr>
+			  <tr>
+				<td>V001</td>
+				<td>Roland Mendel</td>
+				<td>Roland Mendel</td>
+			  </tr>
+			</table> 
+			<script>
+				function openForm() {
+					console.log(document.getElementById("form1").style.display);
+  					document.getElementById("form1").style.display = "inline-block";
+					  document.getElementById("icon1").style.display = "inline-block";
+					  document.getElementById("icon2").style.display = "inline-block";
+					  document.getElementById("icon3").style.display = "inline-block";
+					  document.getElementById("icon4").style.display = "inline-block";
+					}
 
-    <div class="Employee_table_list">
-        <h1>Danh sách nhân viên</h1>
-        <table>  
-            <tr>
-            <th>Mã nhân viên</th>
-            <th>Tên nhân viên</th>
-            <th>Vị trí công việc</th>
-          </tr>
-          <tr>
-            <td>V001</td>
-            <td>Roland Mendel</td>
-            <td>Roland Mendel</td>
-          </tr>
-          <tr>
-            <td>V002</td>
-            <td>Roland Mendel</td>
-            <td>Roland Mendel</td>
-          </tr>
-          <tr>
-            <td>V003</td>
-            <td>Roland Mendel</td>
-            <td>Roland Mendel</td>
-          </tr>
-          <tr>
-            <td>V004</td>
-            <td>Roland Mendel</td>
-            <td>Roland Mendel</td>
-          </tr>
-          
-        </table> 
+				function closeForm() {
+  					document.getElementById("form1").style.display = "none";
+					  document.getElementById("icon1").style.display = "none";
+					  document.getElementById("icon2").style.display = "none";
+					  document.getElementById("icon3").style.display = "none";
+					  document.getElementById("icon4").style.display = "none";
+					
+					}
+					function openForm1() {
+					console.log(document.getElementById("form2").style.display);
+  					document.getElementById("form2").style.display = "inline-block";
+					  document.getElementById("icon6").style.display = "inline-block";
+					  document.getElementById("icon5").style.display = "inline-block";
+					  document.getElementById("icon7").style.display = "inline-block";
+					  document.getElementById("icon8").style.display = "inline-block";
+					}
+
+				function closeForm1() {
+  					document.getElementById("form2").style.display = "none";
+					  document.getElementById("icon6").style.display = "none";
+					  document.getElementById("icon5").style.display = "none";
+					  document.getElementById("icon7").style.display = "none";
+					  document.getElementById("icon8").style.display = "none";
+					}
+			</script>
 </body>
 </html>

@@ -477,3 +477,92 @@ tr:nth-child(even) {
   float: right;
   display: none;
 }
+.project_info h5{
+  margin-top: -39px;
+  margin-left: 150px;
+  color: rgb(19, 8, 169);
+}
+.popup2{
+  position: absolute;
+  top:38%;
+  left: 58%;
+  width: 200px;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+#form1{
+  display:none;
+}
+.popup2 p{
+  border: solid;
+  font-size: 17px;
+  border-width: 0 0 1px 0;
+  text-align: center;
+  color: #dddddd;
+  background-color: rgb(19, 8, 169) ;
+  fill-opacity: inherit;
+  margin-top: 0;
+  margin-bottom: 0px;
+  height: 30px;
+}
+.pop_up_drop_down_kien_thuc p{
+  color: gray;
+  font-size: 17px;
+  background-color: white;
+  border: none;
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 2px;
+}
+#form2{
+  display:none;
+}
+.popup3{
+  position: absolute;
+  top:38%;
+  left: 85%;
+  width: 200px;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.popup3 p{
+  border: solid;
+  font-size: 17px;
+  border-width: 0 0 1px 0;
+  text-align: center;
+  color: #dddddd;
+  background-color: rgb(19, 8, 169) ;
+  fill-opacity: inherit;
+  margin-top: 0;
+  margin-bottom: 0px;
+  height: 30px;
+}
+.pop_up_drop_down_ky_nang p{
+  color: gray;
+  font-size: 17px;
+  background-color: white;
+  border: none;
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 2px;
+}
+.pop_up_drop_down_ky_nang select{
+  font-family: arial, sans-serif;
+  outline: 0;
+  background: white;
+  width: 80%;
+  height: 40px;
+  color: black;
+  border:solid 1px black;
+  padding: 4px;
+  border-radius: 3px;
+  margin-left: 15px;
+}
+.project_info h6{
+  font-size: 15px;
+  margin-top: -39px;
+  margin-left: 200px;
+  color: rgb(19, 8, 169);
+}
