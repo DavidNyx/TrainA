@@ -75,3 +75,42 @@ D:\Phat trien UD HTTT hien dai\TrainA\TrainA\TrainA\obj\Debug\netcoreapp3.1\Trai
 D:\Phat trien UD HTTT hien dai\TrainA\TrainA\TrainA\obj\Debug\netcoreapp3.1\TrainA.dll
 D:\Phat trien UD HTTT hien dai\TrainA\TrainA\TrainA\obj\Debug\netcoreapp3.1\TrainA.pdb
 D:\Phat trien UD HTTT hien dai\TrainA\TrainA\TrainA\obj\Debug\netcoreapp3.1\TrainA.genruntimeconfig.cache
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\appsettings.json
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\TrainA.exe
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\TrainA.deps.json
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\TrainA.runtimeconfig.json
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\TrainA.runtimeconfig.dev.json
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\TrainA.dll
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\TrainA.pdb
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\obj\Debug\netcoreapp3.1\TrainA.csproj.AssemblyReference.cache
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\obj\Debug\netcoreapp3.1\TrainA.GeneratedMSBuildEditorConfig.editorconfig
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\obj\Debug\netcoreapp3.1\TrainA.AssemblyInfoInputs.cache
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\obj\Debug\netcoreapp3.1\TrainA.AssemblyInfo.cs
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\obj\Debug\netcoreapp3.1\TrainA.csproj.CoreCompileInputs.cache
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\obj\Debug\netcoreapp3.1\TrainA.MvcApplicationPartsAssemblyInfo.cache
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\obj\Debug\netcoreapp3.1\staticwebassets\TrainA.StaticWebAssets.Manifest.cache
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\obj\Debug\netcoreapp3.1\staticwebassets\TrainA.StaticWebAssets.xml
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\obj\Debug\netcoreapp3.1\scopedcss\bundle\TrainA.styles.css
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\obj\Debug\netcoreapp3.1\TrainA.RazorTargetAssemblyInfo.cache
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\obj\Debug\netcoreapp3.1\TrainA.csproj.CopyComplete
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\obj\Debug\netcoreapp3.1\TrainA.dll
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\obj\Debug\netcoreapp3.1\TrainA.pdb
+D:\HCMUS\PTUDHTTT\TrainA\TrainA\TrainA\obj\Debug\netcoreapp3.1\TrainA.genruntimeconfig.cache
