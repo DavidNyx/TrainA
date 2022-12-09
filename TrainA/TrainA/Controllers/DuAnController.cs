@@ -26,7 +26,7 @@ namespace TrainA.Controllers
         public JsonResult Get()
         {
             string query = @"
-                            select * from
+                            select MA_DA, TEN_DA
                             dbo.duan
                             ";
 
