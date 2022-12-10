@@ -34,9 +34,7 @@ function getDuAn(id) {
         knowledge += `
 		<tr>
 			<td>${res.KienThuc[i]} 
-				<span id="icon-knowledge-${
-          i + 1
-        }" class="material-symbols-outlined">close</span>
+				<span id="icon${i + 1}" class="material-symbols-outlined">close</span>
 			</td>
 		</tr>
 		`;
@@ -49,7 +47,7 @@ function getDuAn(id) {
         skill += `
 		<tr>
 			<td>${res.KiNang[i]} 
-				<span id="icon-skill-${i + 1}" class="material-symbols-outlined">close</span>
+				<span id="icon${i + 1}" class="material-symbols-outlined">close</span>
 			</td>
 		</tr>
 		`;

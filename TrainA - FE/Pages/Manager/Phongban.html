@@ -12,11 +12,13 @@
     <link rel="icon" type="image/png" href="images/logo.jpg"/>
 </head>
 <body>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="Function\getPhongBan.js"></script>
     <div class="nav_bar">
         <ul>
           <li><a href="Taokhoahoc.html">Khóa học</a></li>
           <li><a href="Vitricongviec.html">Vị trí</a></li>
-          <li><a href="Duan.html">Dự án</a></li>
+          <li><a href="PhongBan.html">Dự án</a></li>
           <li><a href="Phongban.html">Phòng ban</a></li>
           <li><a href="Taokhoahoc.html">Tạo lớp học</a></li>      
         </ul>
@@ -31,8 +33,6 @@
               </div>
         </div>
     </div>
-
-
     <div class="project_table_list">
 			<h1>Danh sách phòng ban</h1>
 			<div class="search_bar_project_table_list">
@@ -62,27 +62,28 @@
 			  </form>
 			</div>
 			<div class="project_list">
-			<table id="project_list">  
-			<tr>
-				<th>Mã phòng ban</th>
-				<th>Tên phòng ban</th>
-			</tr>
-			<script src="Function\getlistDuAn.js"></script>
-			</table>
+				<table id="department_list">  
+					<tr>
+						<th>Mã phòng ban</th>
+						<th>Tên phòng ban</th>
+					</tr>
+				</table>
 			</div>
 		</div>
 	    <div class="project_info">
 			<h2>Thông tin chi tiết</h2>
-			<h3>Tên phòng ban: </h3>
-      <h5>Phòng kế toán</h5>
-      <h4>Mô tả</h4>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+			<div id="department_detail">
+				<h3>Tên phòng ban</h3>
+				<h3>Mô tả</h3>
+			</div>
 			<div class="kien_thuc_editable_table">
-				<table>
+				<div class="text-box">
+					Kiến thức <button class="add_kien_thuc_btn" href="#" id="pop_up_add_kienthuc" onclick="openForm()"> <i class="material-symbols-outlined">
+						edit_note
+					</i></button>
+				</div>
+				<table id="knowledge_list">
 					<tr>
-						<th>Kiến thức <button class="add_kien_thuc_btn" href="#" id="pop_up_add_kienthuc" onclick="openForm()"> <i class="material-symbols-outlined">
-							edit_note
-						</i></button>
 						<div class="popup2" id="form1">
 							<p>Thêm kiến thức</p>
 							<div class="pop_up_drop_down_kien_thuc">
@@ -99,40 +100,19 @@
 							</div>
 							<button class="add_btn">Thêm</button>
 							<button class="cancel_btn" id="cancel" onclick="closeForm()">Hủy</button>
-				
-						</div>
-						  </th>
-						
-					</tr>
-					<tr>
-						<td>C++ <span id="icon1" class="material-symbols-outlined">
-							close
-							</span></td>
-					</tr>
-					<tr>
-						<td>Python<span id="icon2" class="material-symbols-outlined">
-							close
-							</span></td>
-
-					</tr>
-					<tr>
-						<td>Java<span id="icon3"class="material-symbols-outlined">
-							close
-							</span></td>
-					</tr>
-					<tr>
-						<td>C#<span id="icon4" class="material-symbols-outlined">
-							close
-							</span></td>
+						</div>					
 					</tr>
 				</table>
 			</div>
 			<div class="ky_nang_editable_table">
-				<table>
+				<div class="text-box">
+					Kỹ năng <button class="add_ky_nang_btn" href="#"id="pop_up_add_kynang" onclick="openForm1()"> <i class="material-symbols-outlined">
+						edit_note
+					</i></button>
+				</div>
+				<table id="skill_list">
 					<tr>
-						<th>Kỹ năng <button class="add_ky_nang_btn" href="#"id="pop_up_add_kynang" onclick="openForm1()"> <i class="material-symbols-outlined">
-							edit_note
-						</i></button><div class="popup3" id="form2">
+						<div class="popup3" id="form2">
 							<p>Thêm kỹ năng</p>
 							<div class="pop_up_drop_down_ky_nang">
 								<form action="#">
@@ -148,30 +128,7 @@
 							</div>
 							<button class="add_btn">Thêm</button>
 							<button class="cancel_btn" id="cancel" onclick="closeForm1()">Hủy</button>
-				
 						</div>
-						  </div>
-					</th>
-					</tr>
-					<tr>
-						<td>Excel <span id="icon5" class="material-symbols-outlined">
-							close
-							</span></td>
-					</tr>
-					<tr>
-						<td>Word <span id="icon6" class="material-symbols-outlined">
-							close
-							</span></td>
-					</tr>
-					<tr>
-						<td>Access <span id="icon7" class="material-symbols-outlined">
-							close
-							</span></td>
-					</tr>
-					<tr>
-						<td>Power point <span id="icon8" class="material-symbols-outlined">
-							close
-							</span></td>
 					</tr>
 				</table>
 			</div>
@@ -181,15 +138,10 @@
 			<h1>Danh sách nhân viên</h1>
 			<table>  
 				<tr>
-				<th>Mã nhân viên</th>
-				<th>Tên nhân viên</th>
-				<th>Vị trí công việc</th>
+					<th>Mã nhân viên</th>
+					<th>Tên nhân viên</th>
 			  </tr>
-			  <tr>
-				<td>V001</td>
-				<td>Roland Mendel</td>
-				<td>Roland Mendel</td>
-			  </tr>
+			  <table id="member_list"></table>
 			</table> 
 			<script>
 				function openForm() {
