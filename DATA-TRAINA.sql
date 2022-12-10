@@ -67,9 +67,15 @@ VALUES
 
 INSERT DUAN
 VALUES
-(1, N'Dự án 1', '2022-01-01', '2023-01-01', N'Nội dung gì đó không biết nữa...'),
-(2, N'Dự án 2', '2022-02-02', '2023-02-02', N'Cũng không biết viết nội dung gì luôn...'),
-(3, N'Dự án 3', '2022-03-03', '2023-03-03', N'Cái này cũng không biết viết nội dung gì...')
+(1, N'Dự án 1', '2022-01-01', '2023-01-01', N'Dự án Bệnh viện Đa khoa Quốc tế nằm trên địa bàn phường Thạnh Mỹ Lợi, Quận 2,
+Tp.HCM. Bệnh viện có vị trí đắc địa, hiếm có và mang tầm chiến lược. Nguyên nhân là do
+Quận 2 đang được Nhà nước đầu tư xây dựng mới hoàn toàn để trở thành một khu đô thị Thủ
+Thiêm có hệ thống hạ tầng giao thông, hạ tầng xã hội hiện đại đồng bộ.'),
+(2, N'Dự án 2', '2022-02-02', '2023-02-02', N'Khu đất bằng phẳng, nền đất có sức chịu tải yếu (0,7kg/cm 2 -1,0kg/cm 2 ) nên công trình
+xây dựng cần có giải pháp kết cấu móng an toàn cho loại nền đất này.'),
+(3, N'Dự án 3', '2022-03-03', '2023-03-03', N'Dự kiến toàn bộ dự án sẽ được đầu tư nâng cấp trên diện tích đã có sẵn là 1.600 m 2 và đầu tư
+xây dựng mới trên diện tích 8.000 m 2 . Tổng diện tích đất cho toàn bộ dự án vào khoản
+10.000m 2 .')
 
 INSERT KINANG
 VALUES

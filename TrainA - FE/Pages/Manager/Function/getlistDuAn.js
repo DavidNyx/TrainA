@@ -18,7 +18,7 @@ function getDuAn(id) {
     method: "GET",
     url: apiURL,
     success: function (res) {
-      console.log("hello", res);
+      console.log("Chi tiet du an: ", res);
       var result = "";
       result += `
 		<h3>Ngày bắt đầu</h3>
@@ -29,6 +29,46 @@ function getDuAn(id) {
 		<p>${res.ThongTin[0].NOIDUNG}</p>`;
       $(`#project_detail`).empty();
       $(`#project_detail`).append(result);
+      var knowledge = "";
+      for (let i = 0; i < res.KienThuc.length; i++) {
+        knowledge += `
+		<tr>
+			<td>${res.KienThuc[i]} 
+				<span id="icon-knowledge-${
+          i + 1
+        }" class="material-symbols-outlined">close</span>
+			</td>
+		</tr>
+		`;
+        console.log("Danh sach kien thuc: ", res.KienThuc[i]);
+      }
+      $(`#knowledge_list`).empty();
+      $(`#knowledge_list`).append(knowledge);
+      var skill = "";
+      for (let i = 0; i < res.KiNang.length; i++) {
+        skill += `
+		<tr>
+			<td>${res.KiNang[i]} 
+				<span id="icon-skill-${i + 1}" class="material-symbols-outlined">close</span>
+			</td>
+		</tr>
+		`;
+        console.log("Danh sach ki nang: ", res.KiNang[i]);
+      }
+      $(`#skill_list`).empty();
+      $(`#skill_list`).append(skill);
+      var member = "";
+      for (let i = 0; i < res.NhanVien.length; i++) {
+        member += `
+			<tr>
+				<td>${res.NhanVien[i].MA_NV}</td>
+				<td>${res.NhanVien[i].TEN_NV}</td>
+			</tr>
+		`;
+        console.log("Danh sach nhan vien: ", res.NhanVien[i]);
+      }
+      $(`#member_list`).empty();
+      $(`#member_list`).append(member);
     },
     error: function (err) {
       console.log("error", err);
@@ -42,7 +82,7 @@ function getListDuAn() {
     method: "GET",
     url: apiURL,
     success: function (res) {
-      console.log("hello", res);
+      console.log("Danh sach du an: ", res);
       var result = "";
       for (let i = 0; i < res.length; i++) {
         result += `<tr>
