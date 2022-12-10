@@ -48,14 +48,14 @@ VALUES
 
 INSERT VITRI
 VALUES
-(1, N'Senior Developer'),
-(2, N'Sennior Marketing'),
-(3, N'Developer'),
-(4, N'BA'),
-(5, N'UI Designer'),
-(6, N'HR'),
-(7, N'Thư ký'),
-(8, N'Thực tập sinh')
+(1, N'DevOps', N'Có kinh nghiệm với các điện toán đám mây (AWS, Azure, GCP) để triển khai các bản nâng cấp và sửa lỗi. Thực hiện các công cụ và khung tự động hóa (CI/CD pipelines)'),
+(2, N'Marketing', N'Nghiên cứu sản phẩm của công ty và đối thủ, thị trường. Phát triển thị trường cho các sản phẩm mới theo kế hoạch được giao'),
+(3, N'Backend developer', N'Chịu trách nhiệm chính cho Server của các ứng dụng chạy trên Web, tìm cách tối ưu chức năng, đảm bảo về tốc độ xử lý và hiệu suất của toàn bộ trang web.'),
+(4, N'BA', N'phân tích nhu cầu của khách hàng và phối hợp với nội bộ công ty để đưa ra phương án giải quyết phù hợp. Bên cạnh đó, họ còn giúp đổi mới cách thức vận hành kinh doanh giữa các bộ phận để sử dụng tốt nhất nguồn lực đang có'),
+(5, N'UI Designer', N'Thiết kế giao diện và trải nghiệm cho người dùng sản phẩm, có thể là của một website hoặc một app điện thoại'),
+(6, N'HR', N'Các công việc của HR liên quan đến các hoạt động tuyển dụng, lên kế hoạch triển khai các chính sách phù hợp để duy trì nguồn nhân lực cho công ty và có kế hoạch bồi dưỡng phát triển năng lực các cá nhân, phòng ban '),
+(7, N'Thư ký', N'Thực hiện các công việc liên quan đến công tác hỗ trợ việc quản lý, điều hành trong văn phòng, thực hiện các công việc liên quan đến giấy tờ, các công việc tạp vụ hành chính, sắp xếp hồ sơ, soạn thảo văn bản, tiếp khách, lên lịch trình, tổ chức cuộc họp, hội nghị, lên kế hoạch'),
+(8, N'Frontend developer', N'Sử dụng các ngôn ngữ HTML, CSS hay ngôn ngữ lập trình Javascript để các lập trình viên thiết kế ra các giao diện ứng dụng hoặc trang web cho người dùng')
 
 INSERT PHONGBAN
 VALUES

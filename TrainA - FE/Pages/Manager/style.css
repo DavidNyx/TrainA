@@ -570,7 +570,7 @@ tr:nth-child(even) {
   color: rgb(19, 8, 169);
 }
 .text-box {
-  border: 3px solid rgb(19, 8, 169);
+  border: 2px solid silver;
   display: flex;
   justify-content: center;
 }
