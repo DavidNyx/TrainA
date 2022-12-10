@@ -27,7 +27,7 @@ namespace TrainA.Controllers
         {
             string query = @"
                             select MA_DA, TEN_DA
-                            dbo.duan
+                            from dbo.duan
                             ";
 
             DataTable table = new DataTable();
