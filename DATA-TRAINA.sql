@@ -19,32 +19,32 @@ DELETE FROM CHITIET_DA_NV
 
 INSERT NHANVIEN
 VALUES
-(1, N'Nguyễn Văn A', '2001-01-01', 0, '12345', N'Admin', 1, 1),
-(2, N'Lê Hoàng B', '2001-02-02', 0, 'asdfg', N'Admin', 1, 2),
-(3, N'Nguyễn Xuân C', '2001-03-03', 1, '12345', N'Admin', 1, 2),
-(4, N'Trần Ngọc D', '2001-04-04', 1, '12345', N'Admin', 1, 3),
-(5, N'Hoàng Quốc E', '2001-05-05', 0, '12345', N'Quản lý', 2, 1),
-(6, N'Lý Đình Thiên F', '2001-06-06', 1, '12345', N'Quản lý', 2, 2),
-(7, N'Lê Thành G', '2001-07-07', 0, '12345', N'Quản lý', 2, 3),
-(8, N'Nguyễn Trần Linh H', '2001-08-08', 1, '12345', N'Trainer', 1, 1),
-(9, N'Vũ Hoàng I', '2001-09-09', 1, '12345', N'Trainer', 1, 2),
-(10, N'Trần Lê Thiên J', '2001-10-10', 1, '12345', N'Trainer', 1, 3),
-(11, N'Nguyễn Kim K', '2001-11-11', 0, '12345', N'Trainer', 1, 4),
-(12, N'Nguyễn Hoàng Minh L', '2001-12-12', 0, '12345', N'Trainer', 1, 5),
-(13, N'Trần M', '2001-01-13', 0, '12345', N'Trainee', 3, 1),
-(14, N'Lê Minh N', '2001-02-14', 0, '12345', N'Trainee', 4, 1),
-(15, N'Hoàng Lê O', '2001-03-15', 1, '12345', N'Trainee', 6, 1),
-(16, N'Lý P', '2001-04-16', 0, '12345', N'Trainee', 3, 2),
-(17, N'Trần Thị Q', '2001-05-17', 1, '12345', N'Trainee', 4, 2),
-(18, N'Nguyễn Chiến R', '2001-06-18', 0, '12345', N'Trainee', 6, 2),
-(19, N'Nguyễn Phương S', '2001-07-19', 0, '12345', N'Trainee', 5, 2),
-(20, N'Nguyễn T', '2001-08-20', 1, '12345', N'Trainee', 4, 2),
-(21, N'Lê Thiên U', '2001-09-21', 0, '12345', N'Trainee', 6, 2),
-(22, N'Lý Minh V', '2001-10-22', 1, '12345', N'Trainee', 5, 3),
-(23, N'Trần Lai W', '2001-11-23', 1, '12345', N'Trainee', 3, 3),
-(24, N'Trần X', '2001-12-24', 1, '12345', N'Trainee', 3, 3),
-(25, N'Lê An Y', '2001-01-25', 1, '12345', N'Trainee', 4, 3),
-(26, N'Lê Linh Z', '2001-02-26', 1, '12345', N'Trainee', 6, 3)
+(1, N'Nguyễn Văn A', '2001-01-01', 0, '12345', N'Admin', 1, 1, 1),
+(2, N'Lê Hoàng B', '2001-02-02', 0, 'asdfg', N'Admin', 1, 2, 1),
+(3, N'Nguyễn Xuân C', '2001-03-03', 1, '12345', N'Admin', 1, 2, 1),
+(4, N'Trần Ngọc D', '2001-04-04', 1, '12345', N'Admin', 1, 3, 2),
+(5, N'Hoàng Quốc E', '2001-05-05', 0, '12345', N'Quản lý', 2, 1, 3),
+(6, N'Lý Đình Thiên F', '2001-06-06', 1, '12345', N'Quản lý', 2, 2, 3),
+(7, N'Lê Thành G', '2001-07-07', 0, '12345', N'Quản lý', 2, 3, 2),
+(8, N'Nguyễn Trần Linh H', '2001-08-08', 1, '12345', N'Trainer', 1, 1, 4),
+(9, N'Vũ Hoàng I', '2001-09-09', 1, '12345', N'Trainer', 1, 2, 2),
+(10, N'Trần Lê Thiên J', '2001-10-10', 1, '12345', N'Trainer', 1, 3, 4),
+(11, N'Nguyễn Kim K', '2001-11-11', 0, '12345', N'Trainer', 1, 4, 2),
+(12, N'Nguyễn Hoàng Minh L', '2001-12-12', 0, '12345', N'Trainer', 1, 5, 1),
+(13, N'Trần M', '2001-01-13', 0, '12345', N'Trainee', 3, 1, 3),
+(14, N'Lê Minh N', '2001-02-14', 0, '12345', N'Trainee', 4, 1, 2),
+(15, N'Hoàng Lê O', '2001-03-15', 1, '12345', N'Trainee', 6, 1, 3),
+(16, N'Lý P', '2001-04-16', 0, '12345', N'Trainee', 3, 2, 3),
+(17, N'Trần Thị Q', '2001-05-17', 1, '12345', N'Trainee', 4, 2, 1),
+(18, N'Nguyễn Chiến R', '2001-06-18', 0, '12345', N'Trainee', 6, 2, 4),
+(19, N'Nguyễn Phương S', '2001-07-19', 0, '12345', N'Trainee', 5, 2, 4),
+(20, N'Nguyễn T', '2001-08-20', 1, '12345', N'Trainee', 4, 2, 4),
+(21, N'Lê Thiên U', '2001-09-21', 0, '12345', N'Trainee', 6, 2, 4),
+(22, N'Lý Minh V', '2001-10-22', 1, '12345', N'Trainee', 5, 3, 3),
+(23, N'Trần Lai W', '2001-11-23', 1, '12345', N'Trainee', 3, 3, 3),
+(24, N'Trần X', '2001-12-24', 1, '12345', N'Trainee', 3, 3, 4),
+(25, N'Lê An Y', '2001-01-25', 1, '12345', N'Trainee', 4, 3, 4),
+(26, N'Lê Linh Z', '2001-02-26', 1, '12345', N'Trainee', 6, 3, 4)
 
 INSERT VITRI
 VALUES
@@ -56,6 +56,13 @@ VALUES
 (6, N'HR', N'Các công việc của HR liên quan đến các hoạt động tuyển dụng, lên kế hoạch triển khai các chính sách phù hợp để duy trì nguồn nhân lực cho công ty và có kế hoạch bồi dưỡng phát triển năng lực các cá nhân, phòng ban '),
 (7, N'Thư ký', N'Thực hiện các công việc liên quan đến công tác hỗ trợ việc quản lý, điều hành trong văn phòng, thực hiện các công việc liên quan đến giấy tờ, các công việc tạp vụ hành chính, sắp xếp hồ sơ, soạn thảo văn bản, tiếp khách, lên lịch trình, tổ chức cuộc họp, hội nghị, lên kế hoạch'),
 (8, N'Frontend developer', N'Sử dụng các ngôn ngữ HTML, CSS hay ngôn ngữ lập trình Javascript để các lập trình viên thiết kế ra các giao diện ứng dụng hoặc trang web cho người dùng')
+
+INSERT TRINHDO
+VALUES
+(1, N'Senior'),
+(2, N'Junior'),
+(3, N'Fresher'),
+(4, N'Intern')
 
 INSERT PHONGBAN
 VALUES
