@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -18,6 +19,35 @@ namespace TrainA.Controllers
         public KienThucController(IConfiguration configuration)
         {
             _configuration = configuration;
+        }
+
+        [HttpGet]
+        public JsonResult GetKienThucn(int id)
+        {
+            string query = @"
+                            select TEN_KT
+                            from dbo.KIENTHUC
+                            ";
+            DataTable table = new DataTable();
+            string sqlDataSource = _configuration.GetConnectionString("KDongConnection");
+            SqlDataReader myReader;
+            ArrayList dsKienThuc = new ArrayList();
+            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+            {
+                myCon.Open();
+                using (SqlCommand myCommand = new SqlCommand(query, myCon))
+                {
+                    myReader = myCommand.ExecuteReader();
+                    while (myReader.Read())
+                    {
+                        dsKienThuc.Add(myReader[0]);
+                    }
+                    myReader.Close();
+                    myCon.Close();
+                }
+            }
+
+            return new JsonResult(new {DSKienThuc = dsKienThuc });
         }
 
         [HttpGet("phongban/{id}")]
