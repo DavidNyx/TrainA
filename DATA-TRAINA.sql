@@ -3,10 +3,13 @@ GO
 
 DELETE FROM NHANVIEN
 DELETE FROM VITRI
+DELETE FROM TRINHDO
 DELETE FROM PHONGBAN
 DELETE FROM DUAN
 DELETE FROM KINANG
 DELETE FROM KIENTHUC
+DELETE FROM LOPHOC
+DELETE FROM KHOAHOC
 DELETE FROM CHITIET_NV_KN
 DELETE FROM CHITIET_NV_KT
 DELETE FROM CHITIET_VT_KN
@@ -16,6 +19,9 @@ DELETE FROM CHITIET_PB_KT
 DELETE FROM CHITIET_DA_KN
 DELETE FROM CHITIET_DA_KT
 DELETE FROM CHITIET_DA_NV
+DELETE FROM CHITIET_KH_KT
+DELETE FROM CHITIET_KH_KN
+DELETE FROM CHITIET_KH_VT
 
 INSERT NHANVIEN
 VALUES
@@ -103,6 +109,84 @@ VALUES
 (7, N'Marketing truyền thống'),
 (8, N'Marketing điện tử'),
 (9, N'Marketing qua mạng xã hội')
+
+INSERT LOPHOC
+VALUES
+(1, N'Lớp tháng 1/2022', NULL, '2022-01-01', '2022-02-01'),
+(2, N'Lớp tháng 3/2022', NULL, '2022-03-01', '2022-04-01'),
+(3, N'Lớp quý 1/2022', NULL, '2022-01-01', '2022-04-01'),
+(4, N'Lớp quý 2/2022', NULL, '2022-04-01', '2022-07-01')
+
+INSERT KHOAHOC
+VALUES
+(1, N'Tin học văn phòng cơ bản', N'Sử dụng được các phần mềm tin học văn phòng', 1, NULL),
+(2, N'Tin học văn phòng nâng cao', N'Sử dụng thành thạo các phần mềm tin học văn phòng', 1, NULL),
+(3, N'Kĩ năng mềm', N'Nâng cao kĩ năng mềm', 0, 'Phòng nhân sự tầng 1'),
+(4, N'Kĩ năng kinh doanh', N'Nâng cao kĩ năng kinh doanh', 1, NULL),
+(5, N'Khóa học hội nhập', N'Hội nhập với công ty', 0, 'Phòng họp tầng 3')
+
+INSERT CHITIET_KH_KT
+VALUES
+(1,1),
+(1,2),
+(1,3),
+(1,4),
+(1,5),
+(1,6),
+(2,1),
+(2,3),
+(2,4),
+(2,7),
+(3,1),
+(3,2),
+(3,3),
+(3,4),
+(4,7),
+(4,8),
+(4,9),
+(5,5),
+(5,6)
+
+INSERT CHITIET_KH_KN
+VALUES
+(1,1),
+(1,2),
+(1,3),
+(2,1),
+(2,3),
+(3,2),
+(5,5)
+
+INSERT CHITIET_KH_VT
+VALUES
+(1,1),
+(1,2),
+(1,3),
+(1,4),
+(1,5),
+(1,6),
+(1,7),
+(1,8),
+(2,1),
+(2,2),
+(2,3),
+(2,8),
+(3,1),
+(3,2),
+(3,4),
+(3,5),
+(3,6),
+(3,7),
+(3,8),
+(4,2),
+(5,1),
+(5,2),
+(5,3),
+(5,4),
+(5,5),
+(5,6),
+(5,7),
+(5,8)
 
 INSERT CHITIET_NV_KN
 VALUES
