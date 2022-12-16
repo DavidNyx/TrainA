@@ -21,6 +21,35 @@ namespace TrainA.Controllers
             _configuration = configuration;
         }
 
+        [HttpGet]
+        public JsonResult GetKiNang(int id)
+        {
+            string query = @"
+                            select TEN_KN
+                            from dbo.KINANG
+                            ";
+            DataTable table = new DataTable();
+            string sqlDataSource = _configuration.GetConnectionString("KDongConnection");
+            SqlDataReader myReader;
+            ArrayList dsKiNang = new ArrayList();
+            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+            {
+                myCon.Open();
+                using (SqlCommand myCommand = new SqlCommand(query, myCon))
+                {
+                    myReader = myCommand.ExecuteReader();
+                    while (myReader.Read())
+                    {
+                        dsKiNang.Add(myReader[0]);
+                    }
+                    myReader.Close();
+                    myCon.Close();
+                }
+            }
+
+            return new JsonResult(new { DSKiNang = dsKiNang });
+        }
+
         [HttpGet("{id}")]
         public JsonResult Get(int id)
         {
