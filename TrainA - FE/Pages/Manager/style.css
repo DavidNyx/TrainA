@@ -196,7 +196,7 @@ tr:nth-child(even) {
 .Member_table_list {
   font-size: 12px;
   margin-left: 700px;
-  top: 67%;
+  margin-top: 150px;
   left: 43%;
 }
 .project_room_table_list {
@@ -300,12 +300,13 @@ tr:nth-child(even) {
 }
 .kien_thuc_editable_table {
   width: 20%;
+  margin-top: 130px;
 }
 
 .ky_nang_editable_table {
   width: 20%;
   margin-left: 408px;
-  margin-top: -200px;
+  margin-top: -38px;
 }
 
 .add_kien_thuc_btn {
