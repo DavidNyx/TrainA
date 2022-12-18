@@ -67,10 +67,6 @@ namespace TrainA.Controllers
                 using (SqlCommand myCommand = new SqlCommand(query, myCon))
                 {
                     myReader = myCommand.ExecuteReader();
-                    /*                    while (myReader.Read())
-                                        {
-                                            dsKiNang.Add( myReader[0]);
-                                        }*/
                     table.Load(myReader);
                     myReader.Close();
                     myCon.Close();
