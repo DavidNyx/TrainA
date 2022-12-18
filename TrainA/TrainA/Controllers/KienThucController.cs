@@ -22,10 +22,10 @@ namespace TrainA.Controllers
         }
 
         [HttpGet]
-        public JsonResult GetKienThucn(int id)
+        public JsonResult GetKienThuc(int id)
         {
             string query = @"
-                            select TEN_KT
+                            select TEN_KT, MA_KT
                             from dbo.KIENTHUC
                             ";
             DataTable table = new DataTable();
@@ -38,16 +38,13 @@ namespace TrainA.Controllers
                 using (SqlCommand myCommand = new SqlCommand(query, myCon))
                 {
                     myReader = myCommand.ExecuteReader();
-                    while (myReader.Read())
-                    {
-                        dsKienThuc.Add(myReader[0]);
-                    }
+                    table.Load(myReader);
                     myReader.Close();
                     myCon.Close();
                 }
             }
 
-            return new JsonResult(new {DSKienThuc = dsKienThuc });
+            return new JsonResult(new {DSKienThuc = table });
         }
 
         [HttpGet("phongban/{id}")]

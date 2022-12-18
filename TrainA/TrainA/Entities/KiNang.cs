@@ -16,7 +16,6 @@ namespace TrainA.Entities
             DuAns = new HashSet<DuAn>();
             ViTris = new HashSet<ViTri>();
             KhoaHocs = new HashSet<KhoaHoc>();
-
         }
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
