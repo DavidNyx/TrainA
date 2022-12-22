@@ -575,3 +575,137 @@ tr:nth-child(even) {
   display: flex;
   justify-content: center;
 }
+.course_table_list h1{
+  margin-top: 60px;
+  
+}
+.course_table_list{
+  font-size: 17px;
+}
+.search_bar_course_table_list {
+  margin-top: auto;
+  margin-left: 30px;
+  display: inline-block;
+  width: 35%;
+  border-collapse: collapse;
+}
+.search_bar_course_table_list input {
+  float: middle;
+  padding: 6px 10px;
+  margin-top: 0px;
+  margin-right: 16px;
+  background: white;
+  border-color: silver;
+  border-style: solid;
+  font-size: 17px;
+  width: 40%;
+  cursor: pointer;
+}
+.search_bar_course_table_list button {
+  float: left;
+  padding: 6px;
+  margin-top: 0px;
+  font-size: 17px;
+}
+.drop_down_ky_nang_course {
+  display: inline-block;
+  width: 25%;
+  min-width: 15em;
+  margin-left: -180px;
+}
+.drop_down_ky_nang_course p {
+  color: black;
+  font-size: 17px;
+  position: relative;
+  margin-top: -15px;
+  margin-bottom: 3px;
+  margin-left: 0px;
+}
+.drop_down_ky_nang_course select {
+  font-family: arial, sans-serif;
+  outline: 0;
+  background: white;
+  width: 80%;
+  color: black;
+  border: 1px solid silver;
+  height: 40px;
+  padding: 4px;
+  border-radius: 3px;
+  margin-left: -37px;
+}
+.drop_down_kien_thuc_course {
+  display: inline-block;
+  width: 25%;
+  min-width: 15em;
+  margin-left: -40px;
+}
+.drop_down_kien_thuc_course p {
+  color: black;
+  font-size: 17px;
+  position: relative;
+  margin-top: -15px;
+  margin-bottom: 3px;
+  margin-left: 0px;
+}
+.drop_down_kien_thuc_course select {
+  font-family: arial, sans-serif;
+  outline: 0;
+  background: white;
+  width: 80%;
+  color: black;
+  border: 1px solid silver;
+  height: 40px;
+  padding: 4px;
+  border-radius: 3px;
+  margin-left: -37px;
+}
+.drop_down_vi_tri_cong_viec_course {
+  display: inline-block;
+  width: 25%;
+  min-width: 15em;
+  margin-left: -40px;
+}
+.drop_down_vi_tri_cong_viec_course p {
+  color: black;
+  font-size: 17px;
+  position: relative;
+  margin-top: -15px;
+  margin-bottom: 3px;
+  margin-left: 0px;
+}
+.drop_down_vi_tri_cong_viec_course select {
+  font-family: arial, sans-serif;
+  outline: 0;
+  background: white;
+  width: 80%;
+  color: black;
+  border: 1px solid silver;
+  height: 40px;
+  padding: 4px;
+  border-radius: 3px;
+  margin-left: -37px;
+}
+.loc_btn{
+  position: absolute;
+  top :17.5%;
+  left:90%;
+  background-color: rgb(19, 8, 169);
+  border: none;
+  color: white;
+  padding: 12px 45px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.loc_btn:hover{
+  background-color: #4CAF50; /* Green */
+  color: white;
+  transition: .5s;
+}
+.course_list h1{
+  color: black;
+}
+.course_list table th{
+  font-size: 17px;
+}

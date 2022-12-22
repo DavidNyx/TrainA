@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khóa học</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="icon" type="image/png" href="image/logo.jpg"/>
+</head>
+<body>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="Function\getDuAn.js"></script>
+    <div class="nav_bar">
+        <ul>
+            <li><a href="khoahoc.html">Khóa học</a></li>
+            <li><a href="Vitricongviec.html">Vị trí</a></li>
+            <li><a href="Duan.html">Dự án</a></li>
+            <li><a href="Phongban.html">Phòng ban</a></li>
+            <li><a href="Taolop.html">Tạo lớp học</a></li>    
+        </ul>
+        <div class="profile">
+            <a href="#"class="dropbtn"><i class="fa fa-regular fa-user"></i>
+                 Tên người dùng</a>
+              <div class="dropdown-content">
+                <a href="#"><i class="fa fa-solid fa-user"></i>
+                        Tên đăng nhập</a>
+                <a href="#"><i class="fa fa-solid fa-key"></i> Đổi mật khẩu</a>
+                <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Đăng xuất</a>
+              </div>
+        </div>
+      </div>
+    </div>
+    <div class="course_table_list">
+        <h1>Tìm khóa học</h1>
+        <div class="search_bar_course_table_list">
+            <input type="text" placeholder="Enter key">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="drop_down_ky_nang_course">
+            <p>Kỹ năng</p>
+            <form action="#">
+                <select name="ky_nang" id="ky_nang">
+                  <option value="Excel">Excel</option>
+                  <option value="Word">Word</option>
+                  <option value="Access">Access</option>
+                  <option value="Soft_skill">Soft skill</option>
+                </select>
+          </form>
+        </div>
+        <div class="drop_down_kien_thuc_course">
+            <p>Kiến thức</p>
+            <form action="#">
+                <select name="kien_thuc" id="kien_thuc">
+                  <option value="C++">C++</option>
+                  <option value="Python">Python</option>
+                  <option value="Java">Java</option>
+                  <option value="C#">C#</option>
+                </select>
+          </form>
+        </div>
+        <div class="drop_down_vi_tri_cong_viec_course">
+            <p>Vị trí công việc</p>
+            <form action="#">
+                <select name="vi_tri" id="vi_tri">
+                  <option value="Frontend Developer">Frontend Developer</option>
+                  <option value="Backend Developer">Backend Developer</option>
+                  <option value="Project Manager">Project Manager</option>
+                  <option value="Business Analysis">Business Analysis</option>
+                </select>
+          </form>
+        </div>
+        <button class="loc_btn">Lọc</button>
+        </div> 
+        <div class="course_list">
+            <h1>Danh sách khóa học</p>
+            <table>  
+                <tr>
+                    <th>Mã KH</th>
+                    <th>Tên khóa học</th>
+                    <th>Tên khóa học</th>
+                    <th>Giảng viên</th>
+                    <th>Vị trí công việc</th>
+                    <th>Kỹ năng</th>
+                    <th>Kiến thức</th>
+                </tr>
+                <table id="#"></table>
+            </table> 
+        </div> 
+
+</body>
+</html>

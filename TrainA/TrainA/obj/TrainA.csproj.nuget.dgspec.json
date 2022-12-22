@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HCMUS\\PTUDHTTT\\TrainA\\TrainA\\TrainA\\TrainA.csproj": {}
+    "C:\\Users\\haiqu\\Desktop\\TrainA\\TrainA\\TrainA\\TrainA.csproj": {}
   },
   "projects": {
-    "D:\\HCMUS\\PTUDHTTT\\TrainA\\TrainA\\TrainA\\TrainA.csproj": {
+    "C:\\Users\\haiqu\\Desktop\\TrainA\\TrainA\\TrainA\\TrainA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HCMUS\\PTUDHTTT\\TrainA\\TrainA\\TrainA\\TrainA.csproj",
+        "projectUniqueName": "C:\\Users\\haiqu\\Desktop\\TrainA\\TrainA\\TrainA\\TrainA.csproj",
         "projectName": "TrainA",
-        "projectPath": "D:\\HCMUS\\PTUDHTTT\\TrainA\\TrainA\\TrainA\\TrainA.csproj",
-        "packagesPath": "C:\\Users\\KyeDee\\.nuget\\packages\\",
-        "outputPath": "D:\\HCMUS\\PTUDHTTT\\TrainA\\TrainA\\TrainA\\obj\\",
+        "projectPath": "C:\\Users\\haiqu\\Desktop\\TrainA\\TrainA\\TrainA\\TrainA.csproj",
+        "packagesPath": "C:\\Users\\haiqu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\haiqu\\Desktop\\TrainA\\TrainA\\TrainA\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\KyeDee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\haiqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,7 +59,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -71,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.413\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
