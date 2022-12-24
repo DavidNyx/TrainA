@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo lớp học</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="images/logo.jpg"/>
+</head>
+<body>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="Function\getViTri.js"></script>
+    <div class="nav_bar">
+        <ul>
+          <li><a href="khoahoc.html">Khóa học</a></li>
+          <li><a href="Vitricongviec.html">Vị trí</a></li>
+          <li><a href="Duan.html">Dự án</a></li>
+          <li><a href="Phongban.html">Phòng ban</a></li>
+          <li><a href="Taolop.html">Tạo lớp học</a></li>  
+        </ul>
+        <div class="profile">
+            <a href="#"class="dropbtn"><i class="fa fa-regular fa-user"></i>
+                 Tên người dùng</a>
+              <div class="dropdown-content">
+                <a href="#"><i class="fa fa-solid fa-user"></i>
+                        Tên đăng nhập</a>
+                <a href="#"><i class="fa fa-solid fa-key"></i> Đổi mật khẩu</a>
+                <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Đăng xuất</a>
+              </div>
+        </div>
+    </div>
+    <div class="create_class">
+        <h1>Thông tin chung</h1>
+        <h2>Mã lớp học</h2>
+        <input class="class_text_box" type="text" id="classroomID" name="classroomID"><br>
+        <h3>Tên lớp học</h3>
+        <input class="class_name_text_box" type="text" id="classroomName" name="classroomName"><br>
+        <h4>Ngày bắt đầu</h4>
+        <input class="date_box" type="date" ><br>
+        <button class="class_create_request">Gửi yêu cầu</button>
+    </div>
+    <div class="list_course">
+        <h1>Danh sách khóa học</h1>
+        <div class="drop_down_khoa_hoc">
+            <p>Khóa học</p>
+            <form action="#">
+                <select name="khoa_hoc" id="khoa_hoc">
+                    <option value="22ABC">19127569 - Nguyễn Huy Anh Thư</option>
+                    <option value="XXABC">19127536 - Võ Lâm Hải Quốc</option>
+                    <option value="22ABC">19127569 - Nguyễn Huy Anh Thư</option>
+                    <option value="XXABC">19127536 - Võ Lâm Hải Quốc</option>
+                    <option value="22ABC">19127569 - Nguyễn Huy Anh Thư</option>
+                    <option value="XXABC">19127536 - Võ Lâm Hải Quốc</option>
+                </select>
+          </form>
+        </div>
+        <div class="list_of_course">
+            <table>  
+                <tr>
+                    <th>Mã khóa học</th>
+                    <th>Tên khóa học</th>
+                    <th>Giảng viên</th>
+                </tr>
+                <table id="#"></table>
+            </table> 
+        </div> 
+    </div>
+    <div class="list_employee">
+        <h1>Danh sách nhân viên</h1>
+        <div class="drop_down_nhan_vien">
+            <p>Nhân viên</p>
+            <form action="#">
+                <select name="employee" id="employee">
+                  <option value="22ABC">19127569 - Nguyễn Huy Anh Thư</option>
+                  <option value="XXABC">19127536 - Võ Lâm Hải Quốc</option>
+                  <option value="22ABC">19127569 - Nguyễn Huy Anh Thư</option>
+                  <option value="XXABC">19127536 - Võ Lâm Hải Quốc</option>
+                  <option value="22ABC">19127569 - Nguyễn Huy Anh Thư</option>
+                  <option value="XXABC">19127536 - Võ Lâm Hải Quốc</option>
+                </select>
+          </form>
+        </div>
+        <div class="list_of_employee">
+            <table>  
+                <tr>
+                    <th>Mã nhân viên</th>
+                    <th>Tên nhân viên</th>
+                    <th>Vị trí công việc</th>
+                    <th>Phòng ban</th>
+                </tr>
+                <table id="#"></table>
+            </table> 
+        </div> 
+    </div>
+</body>
+</html>

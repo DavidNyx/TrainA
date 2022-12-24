@@ -709,3 +709,139 @@ tr:nth-child(even) {
 .course_list table th{
   font-size: 17px;
 }
+
+.create_class h1{
+  margin-top: 60px;
+  margin-left: 30px;
+}
+.create_class h2{
+  margin-top: 20px;
+  margin-left: 30px;
+  font-size: 17px;
+}
+.create_class input{
+  margin-top: 20px;
+  margin-left: 30px;
+  font-size: 17px;
+}
+.class_text_box {
+  position: absolute;
+  top: 17%;
+  left:0.8%;
+  width: 20%;
+}
+.create_class h3{
+  margin-top: -50px;
+  margin-left: 430px;
+  font-size: 17px;
+}
+.class_name_text_box{
+  position: absolute;
+  top: 17%;
+  left:27.6%;
+  width: 20%;
+}
+.create_class h4 {
+  margin-top: -55px;
+  margin-left: 820px;
+  font-size: 17px;
+}
+.date_box{
+  position: absolute;
+  top: 17%;
+  left:54%;
+  width: 20%;
+}
+.class_create_request{
+  position: absolute;
+  top :10.5%;
+  left:88%;
+  background-color: rgb(19, 8, 169);
+  border: none;
+  color: white;
+  padding: 12px 33px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+}
+.class_create_request:hover{
+  background-color: #4CAF50; /* Green */
+  color: white;
+  transition: .5s;
+}
+
+.list_course h1{
+  margin-top: 60px;
+  margin-left: 30px;
+}
+.drop_down_khoa_hoc {
+  display: inline-block;
+  width: 26%;
+  min-width: 15em;
+  position: relative;
+  margin-left: 70px;
+}
+.drop_down_khoa_hoc p {
+  color: black;
+  font-size: 17px;
+  position: relative;
+  margin-top: -15px;
+  margin-bottom: 3px;
+  margin-left: -30px;
+}
+.drop_down_khoa_hoc select {
+  font-family: arial, sans-serif;
+  outline: 0;
+  background: white;
+  width: 80%;
+  color: black;
+  border: 1px solid silver;
+  height: 40px;
+  padding: 4px;
+  border-radius: 3px;
+  margin-left: -37px;
+}
+.list_of_course table{
+  margin-top: 40px;
+  margin-left: 30px;
+  width: 40%;
+}
+
+.list_employee h1{
+  margin-top: -220px;
+  margin-left: 750px;
+}
+.drop_down_nhan_vien {
+  display: inline-block;
+  width: 26%;
+  min-width: 15em;
+  position: relative;
+  margin-left: 790px;
+}
+.drop_down_nhan_vien p {
+  color: black;
+  font-size: 17px;
+  position: relative;
+  margin-top: -15px;
+  margin-bottom: 3px;
+  margin-left: -30px;
+}
+.drop_down_nhan_vien select {
+  font-family: arial, sans-serif;
+  outline: 0;
+  background: white;
+  width: 80%;
+  color: black;
+  border: 1px solid silver;
+  height: 40px;
+  padding: 4px;
+  border-radius: 3px;
+  margin-left: -37px;
+}
+
+.list_of_employee table{
+  margin-top: 40px;
+  margin-left: 750px;
+  width: 40%;
+}
