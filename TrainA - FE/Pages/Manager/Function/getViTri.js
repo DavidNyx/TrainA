@@ -13,7 +13,7 @@ function chiTietViTri() {
 }
 
 function getViTri(id) {
-  var apiURL = "https://localhost:44398/api/vitri/chitiet/" + id;
+  var apiURL = "https://localhost:5001/api/vitri/chitiet/" + id;
   $.ajax({
     method: "GET",
     url: apiURL,
@@ -73,7 +73,7 @@ function getViTri(id) {
 }
 
 function getListViTri() {
-  var apiURL = "https://localhost:44398/api/vitri";
+  var apiURL = "https://localhost:5001/api/vitri";
   $.ajax({
     method: "GET",
     url: apiURL,

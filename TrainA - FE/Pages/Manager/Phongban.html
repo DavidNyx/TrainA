@@ -14,6 +14,9 @@
 <body>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="Function\getPhongBan.js"></script>
+	<script src="Function\getKyNang.js"></script>
+	<script src="Function\getKienThuc.js"></script>
+	<script src="Function\searchBar.js"></script>
     <div class="nav_bar">
         <ul>
           <li><a href="khoahoc.html">Khóa học</a></li>
@@ -36,28 +39,21 @@
     <div class="project_table_list">
 			<h1>Danh sách phòng ban</h1>
 			<div class="search_bar_project_table_list">
-				<input type="text" placeholder="Enter key">
-				<button type="submit"><i class="fa fa-search"></i></button>
+				<input type="text" placeholder="Enter key" id="myInput">
 			</div>
 			<div class="drop_down_ky_nang">
 				<p>Kỹ năng</p>
 				<form action="#">
-					<select name="ky_nang" id="ky_nang">
-					  <option value="Excel">Excel</option>
-					  <option value="Word">Word</option>
-					  <option value="Access">Access</option>
-					  <option value="Soft_skill">Soft skill</option>
+					<select name="ky_nang" id="ds_kynang">
+						<option value="Empty"></option>
 					</select>
 			  </form>
 			</div>
 			<div class="drop_down_kien_thuc">
 				<p>Kiến thức</p>
 				<form action="#">
-					<select name="kien_thuc" id="kien_thuc">
-					  <option value="C++">C++</option>
-					  <option value="Python">Python</option>
-					  <option value="Java">Java</option>
-					  <option value="C#">C#</option>
+					<select name="kien_thuc" id="ds_kienthuc">
+						<option value="Empty"></option>
 					</select>
 			  </form>
 			</div>
@@ -91,10 +87,6 @@
 									<p>Kiến thức</p>
 									<select name="kien_thuc" id="kien_thuc_form">
 									<option value="Empty"></option>
-									  <option value="C++">C++</option>
-									  <option value="Python">Python</option>
-									  <option value="Java">Java</option>
-									  <option value="C#">C#</option>
 									</select>
 							  </form>
 							</div>
@@ -119,10 +111,6 @@
 									<p>Kỹ năng</p>
 									<select name="ky_nang" id="ky_nang_form">
 									<option value="empty"></option>
-									  <option value="excel">Excel</option>
-									  <option value="word">Word</option>
-									  <option value="power_point">Power_point</option>
-									  <option value="access">Access</option>
 									</select>
 							  </form>
 							</div>

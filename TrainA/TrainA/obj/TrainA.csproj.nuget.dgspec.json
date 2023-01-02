@@ -1,21 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\haiqu\\Desktop\\TrainA\\TrainA\\TrainA\\TrainA.csproj": {}
+    "D:\\Phat trien UD HTTT hien dai\\TrainA\\TrainA\\TrainA\\TrainA.csproj": {}
   },
   "projects": {
-    "C:\\Users\\haiqu\\Desktop\\TrainA\\TrainA\\TrainA\\TrainA.csproj": {
+    "D:\\Phat trien UD HTTT hien dai\\TrainA\\TrainA\\TrainA\\TrainA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\haiqu\\Desktop\\TrainA\\TrainA\\TrainA\\TrainA.csproj",
+        "projectUniqueName": "D:\\Phat trien UD HTTT hien dai\\TrainA\\TrainA\\TrainA\\TrainA.csproj",
         "projectName": "TrainA",
-        "projectPath": "C:\\Users\\haiqu\\Desktop\\TrainA\\TrainA\\TrainA\\TrainA.csproj",
-        "packagesPath": "C:\\Users\\haiqu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\haiqu\\Desktop\\TrainA\\TrainA\\TrainA\\obj\\",
+        "projectPath": "D:\\Phat trien UD HTTT hien dai\\TrainA\\TrainA\\TrainA\\TrainA.csproj",
+        "packagesPath": "C:\\Users\\MEiMUSe\\.nuget\\packages\\",
+        "outputPath": "D:\\Phat trien UD HTTT hien dai\\TrainA\\TrainA\\TrainA\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\haiqu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\MEiMUSe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -59,8 +65,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -72,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

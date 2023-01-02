@@ -13,7 +13,7 @@ function chiTietDuAn() {
 }
 
 function getDuAn(id) {
-  var apiURL = "https://localhost:44398/api/duan/chitiet/" + id;
+  var apiURL = "https://localhost:5001/api/duan/chitiet/" + id;
   $.ajax({
     method: "GET",
     url: apiURL,
@@ -75,7 +75,7 @@ function getDuAn(id) {
 }
 
 function getListDuAn() {
-  var apiURL = "https://localhost:44398/api/duan";
+  var apiURL = "https://localhost:5001/api/duan";
   $.ajax({
     method: "GET",
     url: apiURL,
@@ -88,7 +88,7 @@ function getListDuAn() {
 		  	<a>${res[i].MA_DA}</a>
 		  </td>
           <td>${res[i].TEN_DA}</td>
-        </tr>`;
+		<tr>`;
       }
       $(`#project_list`).append(result);
     },

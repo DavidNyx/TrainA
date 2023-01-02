@@ -13,7 +13,7 @@ function chiTietPhongBan() {
 }
 
 function getPhongBan(id) {
-  var apiURL = "https://localhost:44398/api/phongban/chitiet/" + id;
+  var apiURL = "https://localhost:5001/api/phongban/chitiet/" + id;
   $.ajax({
     method: "GET",
     url: apiURL,
@@ -73,7 +73,7 @@ function getPhongBan(id) {
 }
 
 function getListPhongBan() {
-  var apiURL = "https://localhost:44398/api/phongban";
+  var apiURL = "https://localhost:5001/api/phongban";
   $.ajax({
     method: "GET",
     url: apiURL,
