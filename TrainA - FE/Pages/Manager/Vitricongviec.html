@@ -17,6 +17,7 @@
 	<script src="Function\getKyNang.js"></script>
 	<script src="Function\getKienThuc.js"></script>
 	<script src="Function\searchBar.js"></script>
+	<script src="Function\filterSearch_vitri.js"></script>
     <div class="nav_bar">
         <ul>
           <li><a href="khoahoc.html">Khóa học</a></li>
@@ -45,21 +46,15 @@
 				<p>Kỹ năng</p>
 				<form action="#">
 					<select name="ky_nang" id="ds_kynang">
-					  <option value="Excel">Excel</option>
-					  <option value="Word">Word</option>
-					  <option value="Access">Access</option>
-					  <option value="Soft_skill">Soft skill</option>
+						<option value="Empty"></option>
 					</select>
 			  </form>
 			</div>
 			<div class="drop_down_kien_thuc">
 				<p>Kiến thức</p>
 				<form action="#">
-					<select name="kien_thuc" id="kien_thuc">
-					  <option value="C++">C++</option>
-					  <option value="Python">Python</option>
-					  <option value="Java">Java</option>
-					  <option value="C#">C#</option>
+					<select name="kien_thuc" id="ds_kienthuc">
+						<option value="Empty"></option>
 					</select>
 			  </form>
 			</div>
