@@ -33,7 +33,7 @@ function getDuAn(id) {
       for (let i = 0; i < res.KienThuc.length; i++) {
         knowledge += `
 		<tr>
-			<td>${res.KienThuc[i]} 
+			<td>${res.KienThuc[i].TEN_KT} 
 				<span id="icon${i + 1}" class="material-symbols-outlined">close</span>
 			</td>
 		</tr>
@@ -46,7 +46,7 @@ function getDuAn(id) {
       for (let i = 0; i < res.KiNang.length; i++) {
         skill += `
 		<tr>
-			<td>${res.KiNang[i]} 
+			<td>${res.KiNang[i].TEN_KN} 
 				<span id="icon${i + 1}" class="material-symbols-outlined">close</span>
 			</td>
 		</tr>
@@ -83,7 +83,7 @@ function getListDuAn() {
       console.log("Danh sach du an: ", res);
       var result = "";
       for (let i = 0; i < res.length; i++) {
-        result += `<tr>
+        result += `<tr id="${res[i].MA_DA}" class="project_element">
           <td>
 		  	<a>${res[i].MA_DA}</a>
 		  </td>

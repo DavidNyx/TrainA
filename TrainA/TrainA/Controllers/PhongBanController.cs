@@ -128,14 +128,14 @@ namespace TrainA.Controllers
         public JsonResult GetKienThucByDuAn(int id)
         {
             string query = @"
-                            select TEN_KT
+                            select TEN_KT, KIENTHUC.MA_KT
                             from
                             dbo.CHITIET_PB_KT left join dbo.KIENTHUC
                             on CHITIET_PB_KT.MA_KT = KIENTHUC.MA_KT
                             where MA_PB = @MA_PB
                             ";
             string query1 = @"
-                            select TEN_KN
+                            select TEN_KN, KINANG.MA_KN
                             from
                             dbo.CHITIET_PB_KN left join dbo.KINANG
                             on CHITIET_PB_KN.MA_KN = KINANG.MA_KN                          
@@ -156,8 +156,8 @@ namespace TrainA.Controllers
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("KDongConnection");
             SqlDataReader myReader;
-            ArrayList dsKiNang = new ArrayList();
-            ArrayList dsKienThuc = new ArrayList();
+            var dsKiNang = new DataTable();
+            var dsKienThuc = new DataTable();
             var ttPhgBan = new DataTable();
             var dsNhanVien = new DataTable();
             using (SqlConnection myCon = new SqlConnection(sqlDataSource))
@@ -167,10 +167,8 @@ namespace TrainA.Controllers
                 {
                     myCommand.Parameters.AddWithValue("@MA_PB", id);
                     myReader = myCommand.ExecuteReader();
-                    while (myReader.Read())
-                    {
-                        dsKienThuc.Add(myReader[0]);
-                    }
+                    dsKienThuc.Load(myReader);
+                    
                     myReader.Close();
                 }
 
@@ -196,10 +194,8 @@ namespace TrainA.Controllers
 
                     myCommand.Parameters.AddWithValue("@MA_PB", id);
                     myReader = myCommand.ExecuteReader();
-                    while (myReader.Read())
-                    {
-                        dsKiNang.Add(myReader[0]);
-                    }
+                    dsKiNang.Load(myReader);
+
                     myReader.Close();
                     myCon.Close();
                 }
