@@ -41,6 +41,8 @@ function getDuAn(id) {
       var result = "";
       result += `
 	  	<input id="example" value="${id}" type="hidden"/>
+		  <input id="kt_length" value="${res.KienThuc.length}" type="hidden"/>
+		  <input id="kn_length" value="${res.KiNang.length}" type="hidden"/>
 		<h3>Ngày bắt đầu</h3>
 		<p>${res.ThongTin[0].NGAYBATDAU}</p>
 		<h3>Ngày kết thúc</h3>
@@ -54,7 +56,7 @@ function getDuAn(id) {
         knowledge += `
 		<tr>
 			<td>${res.KienThuc[i].TEN_KT} 
-				<span id="icon${i + 1}" class="material-symbols-outlined">close</span>
+				<span onclick="getIdDuAn_XoaKT(${res.KienThuc[i].MA_KT})" id="kt_icon${i}" class="material-symbols-outlined">close</span>
 			</td>
 		</tr>
 		`;
@@ -67,7 +69,7 @@ function getDuAn(id) {
         skill += `
 		<tr>
 			<td>${res.KiNang[i].TEN_KN} 
-				<span id="icon${i + 1}" class="material-symbols-outlined">close</span>
+				<span onclick="getIdDuAn_XoaKN(${res.KiNang[i].MA_KN})" id="kn_icon${i}" class="material-symbols-outlined">close</span>
 			</td>
 		</tr>
 		`;

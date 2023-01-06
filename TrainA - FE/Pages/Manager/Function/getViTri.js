@@ -3,13 +3,32 @@ $(document).ready(function () {
   chiTietViTri();
 });
 
-function chiTietViTri() {
-  $("body").on("click", "a", function () {
-    var self = $(this); //this la the "a"
-    var value = self.text();
-    console.log(value);
-    getViTri(value);
+function getListViTri() {
+  var apiURL = "https://localhost:5001/api/vitri";
+  $.ajax({
+    method: "GET",
+    url: apiURL,
+    success: function (res) {
+      console.log("Danh sach phong ban: ", res);
+      var result = "";
+      for (let i = 0; i < res.length; i++) {
+        result += `<tr id="${res[i].MA_VT}" class="job_element">
+				<td>
+					<a onclick="chiTietViTri('${res[i].MA_VT}')">${res[i].MA_VT}</a>
+				</td>
+				<td>${res[i].TEN_VT}</td>
+			  </tr>`;
+      }
+      $(`#job_list`).append(result);
+    },
+    error: function (err) {
+      console.log("error", err);
+    },
   });
+}
+
+function chiTietViTri(value) {
+  getViTri(value);
 }
 
 function getViTri(id) {
@@ -21,6 +40,9 @@ function getViTri(id) {
       console.log("Chi tiet vi tri: ", res);
       var result = "";
       result += `
+	  <input id="example" value="${id}" type="hidden"/>
+	  <input id="kt_length" value="${res.KienThuc.length}" type="hidden"/>
+	  <input id="kn_length" value="${res.KiNang.length}" type="hidden"/>
 		  <h3>Tên vị trí</h3>
 		  <p>${res.ThongTin[0].TEN_VT}</p>
 		  <h3>Mô tả</h3>
@@ -32,7 +54,9 @@ function getViTri(id) {
         knowledge += `
 		  <tr>
 			  <td>${res.KienThuc[i].TEN_KT} 
-				  <span id="icon${i + 1}" class="material-symbols-outlined">close</span>
+				  <span onclick="getIdvitri_XoaKT(${res.KienThuc[i].MA_KT} )" id="icon${
+          i + 1
+        }" class="material-symbols-outlined">close</span>
 			  </td>
 		  </tr>
 		  `;
@@ -45,7 +69,9 @@ function getViTri(id) {
         skill += `
 		  <tr>
 			  <td>${res.KiNang[i].TEN_KN} 
-				  <span id="icon${i + 1}" class="material-symbols-outlined">close</span>
+				  <span onclick="getIdvitri_XoaKN(${res.KiNang[i].MA_KN})" id="icon${
+          i + 1
+        }" class="material-symbols-outlined">close</span>
 			  </td>
 		  </tr>
 		  `;
@@ -65,30 +91,6 @@ function getViTri(id) {
       }
       $(`#member_list`).empty();
       $(`#member_list`).append(member);
-    },
-    error: function (err) {
-      console.log("error", err);
-    },
-  });
-}
-
-function getListViTri() {
-  var apiURL = "https://localhost:5001/api/vitri";
-  $.ajax({
-    method: "GET",
-    url: apiURL,
-    success: function (res) {
-      console.log("Danh sach phong ban: ", res);
-      var result = "";
-      for (let i = 0; i < res.length; i++) {
-        result += `<tr id="${res[i].MA_VT}" class="job_element">
-			  <td>
-				  <a>${res[i].MA_VT}</a>
-			  </td>
-			  <td>${res[i].TEN_VT}</td>
-			</tr>`;
-      }
-      $(`#job_list`).append(result);
     },
     error: function (err) {
       console.log("error", err);
