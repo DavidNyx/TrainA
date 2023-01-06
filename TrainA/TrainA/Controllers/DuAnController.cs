@@ -143,7 +143,7 @@ namespace TrainA.Controllers
             {
                 if (Utils.myValueExist("KiNang", "MA_KN", kiNang.MaKN.ToString(), sqlDataSource))
                 {
-                    if (!Utils.myValueExist("CHITIET_DA_KN", "MA_KN", kiNang.MaKN.ToString(), sqlDataSource))
+                    if (!Utils.myValueExist("CHITIET_DA_KN", "Ma_DA ="+id.ToString()+" and MA_KN", kiNang.MaKN.ToString(), sqlDataSource))
                     {
                         string query = @"
                            insert into dbo.CHITIET_DA_KN (MA_DA,MA_KN)
@@ -181,7 +181,7 @@ namespace TrainA.Controllers
             {
                 if (Utils.myValueExist("KienThuc", "MA_KT", kienThuc.MaKT.ToString(), sqlDataSource))
                 {
-                    if (!Utils.myValueExist("CHITIET_DA_KT", "MA_KT", kienThuc.MaKT.ToString(), sqlDataSource))
+                    if (!Utils.myValueExist("CHITIET_DA_KT","Ma_DA =" + id.ToString() + " and MA_KT", kienThuc.MaKT.ToString(), sqlDataSource))
                     {
                         string query = @"
                            insert into dbo.CHITIET_DA_KT (MA_DA,MA_KT)
