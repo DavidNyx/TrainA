@@ -144,7 +144,7 @@ namespace TrainA.Controllers
             {
                 if (Utils.myValueExist("KiNang", "MA_KN", kiNang.MaKN.ToString(), sqlDataSource))
                 {
-                    if (!Utils.myValueExist("CHITIET_VT_KN", "MA_KN", kiNang.MaKN.ToString(), sqlDataSource))
+                    if (!Utils.myValueExist("CHITIET_VT_KN", "Ma_VT =" + id.ToString() + " and MA_KN", kiNang.MaKN.ToString(), sqlDataSource))
                     {
                         string query = @"
                            insert into dbo.CHITIET_VT_KN (MA_VT,MA_KN)
@@ -182,7 +182,7 @@ namespace TrainA.Controllers
             {
                 if (Utils.myValueExist("KienThuc", "MA_KT", kienThuc.MaKT.ToString(), sqlDataSource))
                 {
-                    if (!Utils.myValueExist("CHITIET_VT_KT", "MA_KT", kienThuc.MaKT.ToString(), sqlDataSource))
+                    if (!Utils.myValueExist("CHITIET_VT_KT", "Ma_VT =" + id.ToString() + " and MA_KT", kienThuc.MaKT.ToString(), sqlDataSource))
                     {
                         string query = @"
                            insert into dbo.CHITIET_VT_KT (MA_VT,MA_KT)
@@ -210,6 +210,82 @@ namespace TrainA.Controllers
                 }
             }
             return new JsonResult("Thêm thất bại");
+        }
+
+        [HttpDelete("xoakinang/{id}")]
+        public JsonResult XoaKiNang(KiNang kiNang, int id)
+        {
+            string sqlDataSource = _configuration.GetConnectionString("KDongConnection");
+            if (Utils.myValueExist("ViTri", "MA_VT", id.ToString(), sqlDataSource))
+            {
+                if (Utils.myValueExist("KiNang", "MA_KN", kiNang.MaKN.ToString(), sqlDataSource))
+                {
+                    if (Utils.myValueExist("CHITIET_VT_KN", "Ma_VT =" + id.ToString() + " and MA_KN", kiNang.MaKN.ToString(), sqlDataSource))
+                    {
+                        string query = @"
+                          delete CHITIET_VT_KN
+                          where MA_VT = @MA_VT and MA_KN = @MA_KN
+                            ";
+
+                        DataTable table = new DataTable();
+                        SqlDataReader myReader;
+                        using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+                        {
+                            myCon.Open();
+                            using (SqlCommand myCommand = new SqlCommand(query, myCon))
+                            {
+                                myCommand.Parameters.AddWithValue("@MA_VT", id);
+                                myCommand.Parameters.AddWithValue("@MA_KN", kiNang.MaKN);
+                                myReader = myCommand.ExecuteReader();
+                                table.Load(myReader);
+                                myReader.Close();
+                                myCon.Close();
+                            }
+                        }
+                        return new JsonResult("Xoá thành công");
+                    }
+                    return new JsonResult("Không tồn tại");
+                }
+            }
+            return new JsonResult("Xoá thất bại");
+        }
+
+        [HttpDelete("xoakienthuc/{id}")]
+        public JsonResult XoaKienThuc(KiNang kiNang, int id)
+        {
+            string sqlDataSource = _configuration.GetConnectionString("KDongConnection");
+            if (Utils.myValueExist("ViTri", "MA_VT", id.ToString(), sqlDataSource))
+            {
+                if (Utils.myValueExist("KienThuc", "MA_KT", kiNang.MaKN.ToString(), sqlDataSource))
+                {
+                    if (Utils.myValueExist("CHITIET_VT_KT", "Ma_VT =" + id.ToString() + " and MA_KT", kiNang.MaKN.ToString(), sqlDataSource))
+                    {
+                        string query = @"
+                          delete CHITIET_VT_KT
+                          where MA_VT = @MA_VT and MA_KT = @MA_KT
+                            ";
+
+                        DataTable table = new DataTable();
+                        SqlDataReader myReader;
+                        using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+                        {
+                            myCon.Open();
+                            using (SqlCommand myCommand = new SqlCommand(query, myCon))
+                            {
+                                myCommand.Parameters.AddWithValue("@MA_VT", id);
+                                myCommand.Parameters.AddWithValue("@MA_KT", kiNang.MaKN);
+                                myReader = myCommand.ExecuteReader();
+                                table.Load(myReader);
+                                myReader.Close();
+                                myCon.Close();
+                            }
+                        }
+                        return new JsonResult("Xoá thành công");
+                    }
+                    return new JsonResult("Không tồn tại");
+                }
+            }
+            return new JsonResult("Xoá thất bại");
         }
     }
 }
