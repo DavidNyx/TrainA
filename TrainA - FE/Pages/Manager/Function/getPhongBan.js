@@ -3,13 +3,8 @@ $(document).ready(function () {
   chiTietPhongBan();
 });
 
-function chiTietPhongBan() {
-  $("body").on("click", "a", function () {
-    var self = $(this); //this la the "a"
-    var value = self.text();
-    console.log(value);
-    getPhongBan(value);
-  });
+function chiTietPhongBan(value) {
+  getPhongBan(value);
 }
 
 function getPhongBan(id) {
@@ -21,6 +16,7 @@ function getPhongBan(id) {
       console.log("Chi tiet phong ban: ", res);
       var result = "";
       result += `
+	  		<input id="example" value="${id}" type="hidden"/>
 		  <h3>Tên phòng ban</h3>
 		  <p>${res.ThongTin[0].TEN_PB}</p>
 		  <h3>Nội dung</h3>
@@ -83,7 +79,7 @@ function getListPhongBan() {
       for (let i = 0; i < res.length; i++) {
         result += `<tr id="${res[i].MA_PB}" class="department_element">
 			<td>
-				<a>${res[i].MA_PB}</a>
+				<a onclick="chiTietPhongBan('${res[i].MA_PB}')">${res[i].MA_PB}</a>
 			</td>
 			<td>${res[i].TEN_PB}</td>
 		  </tr>`;
