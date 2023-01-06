@@ -210,5 +210,82 @@ namespace TrainA.Controllers
             }
             return new JsonResult("Thêm thất bại");
         }
+
+
+        [HttpDelete("xoakinang/{id}")]
+        public JsonResult XoaKiNang(KiNang kiNang, int id)
+        {
+            string sqlDataSource = _configuration.GetConnectionString("KDongConnection");
+            if (Utils.myValueExist("DUAN", "MA_DA", id.ToString(), sqlDataSource))
+            {
+                if (Utils.myValueExist("KiNang", "MA_KN", kiNang.MaKN.ToString(), sqlDataSource))
+                {
+                    if (Utils.myValueExist("CHITIET_DA_KN", "Ma_DA =" + id.ToString() + " and MA_KN", kiNang.MaKN.ToString(), sqlDataSource))
+                    {
+                        string query = @"
+                          delete CHITIET_DA_KN
+                          where MA_DA = @MA_DA and MA_KN = @MA_KN
+                            ";
+
+                        DataTable table = new DataTable();
+                        SqlDataReader myReader;
+                        using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+                        {
+                            myCon.Open();
+                            using (SqlCommand myCommand = new SqlCommand(query, myCon))
+                            {
+                                myCommand.Parameters.AddWithValue("@MA_DA", id);
+                                myCommand.Parameters.AddWithValue("@MA_KN", kiNang.MaKN);
+                                myReader = myCommand.ExecuteReader();
+                                table.Load(myReader);
+                                myReader.Close();
+                                myCon.Close();
+                            }
+                        }
+                        return new JsonResult("Xoá thành công");
+                    }
+                    return new JsonResult("Không tồn tại");
+                }
+            }
+            return new JsonResult("Xoá thất bại");
+        }
+
+        [HttpDelete("xoakienthuc/{id}")]
+        public JsonResult XoaKienThuc(KiNang kiNang, int id)
+        {
+            string sqlDataSource = _configuration.GetConnectionString("KDongConnection");
+            if (Utils.myValueExist("PHONGBAN", "MA_PB", id.ToString(), sqlDataSource))
+            {
+                if (Utils.myValueExist("KienThuc", "MA_KT", kiNang.MaKN.ToString(), sqlDataSource))
+                {
+                    if (Utils.myValueExist("CHITIET_PB_KT", "Ma_PB =" + id.ToString() + " and MA_KT", kiNang.MaKN.ToString(), sqlDataSource))
+                    {
+                        string query = @"
+                          delete CHITIET_PB_KT
+                          where MA_PB = @MA_PB and MA_KT = @MA_KT
+                            ";
+
+                        DataTable table = new DataTable();
+                        SqlDataReader myReader;
+                        using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+                        {
+                            myCon.Open();
+                            using (SqlCommand myCommand = new SqlCommand(query, myCon))
+                            {
+                                myCommand.Parameters.AddWithValue("@MA_PB", id);
+                                myCommand.Parameters.AddWithValue("@MA_KT", kiNang.MaKN);
+                                myReader = myCommand.ExecuteReader();
+                                table.Load(myReader);
+                                myReader.Close();
+                                myCon.Close();
+                            }
+                        }
+                        return new JsonResult("Xoá thành công");
+                    }
+                    return new JsonResult("Không tồn tại");
+                }
+            }
+            return new JsonResult("Xoá thất bại");
+        }
     }
 }
