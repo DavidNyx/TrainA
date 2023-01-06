@@ -18,6 +18,8 @@
 	<script src="Function\getKienThuc.js"></script>
 	<script src="Function\searchBar.js"></script>
 	<script src="Function\filterSearch_duan.js"></script>
+	<script src="Function\addKienThuc.js"></script>
+	<script src="Function\addKiNang.js"></script>
     <div class="nav_bar">
         <ul>
             <li><a href="khoahoc.html">Khóa học</a></li>
@@ -89,7 +91,7 @@
 									</select>
 							  </form>
 							</div>
-							<button class="add_btn">Thêm</button>
+							<button class="add_btn_kt" onclick="getIdDuAn_KT()">Thêm</button>
 							<button class="cancel_btn" id="cancel" onclick="closeForm()">Hủy</button>
 						</div>
 					</tr>
@@ -113,7 +115,7 @@
 									</select>
 							  </form>
 							</div>
-							<button class="add_btn">Thêm</button>
+							<button class="add_btn_kn" onclick="getIdDuAn_KN()">Thêm</button>
 							<button class="cancel_btn" id="cancel" onclick="closeForm1()">Hủy</button>
 						</div>
 					</tr>
