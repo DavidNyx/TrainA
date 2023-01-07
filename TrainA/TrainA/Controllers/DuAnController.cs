@@ -254,15 +254,15 @@ namespace TrainA.Controllers
         public JsonResult XoaKienThuc(KiNang kiNang, int id)
         {
             string sqlDataSource = _configuration.GetConnectionString("KDongConnection");
-            if (Utils.myValueExist("PHONGBAN", "MA_PB", id.ToString(), sqlDataSource))
+            if (Utils.myValueExist("DUAN", "MA_DA", id.ToString(), sqlDataSource))
             {
                 if (Utils.myValueExist("KienThuc", "MA_KT", kiNang.MaKN.ToString(), sqlDataSource))
                 {
-                    if (Utils.myValueExist("CHITIET_PB_KT", "Ma_PB =" + id.ToString() + " and MA_KT", kiNang.MaKN.ToString(), sqlDataSource))
+                    if (Utils.myValueExist("CHITIET_DA_KT", "Ma_DA =" + id.ToString() + " and MA_KT", kiNang.MaKN.ToString(), sqlDataSource))
                     {
                         string query = @"
-                          delete CHITIET_PB_KT
-                          where MA_PB = @MA_PB and MA_KT = @MA_KT
+                          delete CHITIET_DA_KT
+                          where MA_DA = @MA_DA and MA_KT = @MA_KT
                             ";
 
                         DataTable table = new DataTable();
@@ -272,7 +272,7 @@ namespace TrainA.Controllers
                             myCon.Open();
                             using (SqlCommand myCommand = new SqlCommand(query, myCon))
                             {
-                                myCommand.Parameters.AddWithValue("@MA_PB", id);
+                                myCommand.Parameters.AddWithValue("@MA_DA", id);
                                 myCommand.Parameters.AddWithValue("@MA_KT", kiNang.MaKN);
                                 myReader = myCommand.ExecuteReader();
                                 table.Load(myReader);
