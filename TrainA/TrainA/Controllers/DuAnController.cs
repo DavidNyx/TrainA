@@ -251,14 +251,14 @@ namespace TrainA.Controllers
         }
 
         [HttpDelete("xoakienthuc/{id}")]
-        public JsonResult XoaKienThuc(KiNang kiNang, int id)
+        public JsonResult XoaKienThuc(KienThuc kienThuc, int id)
         {
             string sqlDataSource = _configuration.GetConnectionString("KDongConnection");
             if (Utils.myValueExist("DUAN", "MA_DA", id.ToString(), sqlDataSource))
             {
-                if (Utils.myValueExist("KienThuc", "MA_KT", kiNang.MaKN.ToString(), sqlDataSource))
+                if (Utils.myValueExist("KienThuc", "MA_KT", kienThuc.MaKT.ToString(), sqlDataSource))
                 {
-                    if (Utils.myValueExist("CHITIET_DA_KT", "Ma_DA =" + id.ToString() + " and MA_KT", kiNang.MaKN.ToString(), sqlDataSource))
+                    if (Utils.myValueExist("CHITIET_DA_KT", "Ma_DA =" + id.ToString() + " and MA_KT", kienThuc.MaKT.ToString(), sqlDataSource))
                     {
                         string query = @"
                           delete CHITIET_DA_KT
@@ -273,7 +273,7 @@ namespace TrainA.Controllers
                             using (SqlCommand myCommand = new SqlCommand(query, myCon))
                             {
                                 myCommand.Parameters.AddWithValue("@MA_DA", id);
-                                myCommand.Parameters.AddWithValue("@MA_KT", kiNang.MaKN);
+                                myCommand.Parameters.AddWithValue("@MA_KT", kienThuc.MaKT);
                                 myReader = myCommand.ExecuteReader();
                                 table.Load(myReader);
                                 myReader.Close();
