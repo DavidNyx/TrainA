@@ -17,6 +17,8 @@ function getPhongBan(id) {
       var result = "";
       result += `
 	  		<input id="example" value="${id}" type="hidden"/>
+			  <input id="kt_length" value="${res.KienThuc.length}" type="hidden"/>
+			  <input id="kn_length" value="${res.KiNang.length}" type="hidden"/>
 		  <h3>Tên phòng ban</h3>
 		  <p>${res.ThongTin[0].TEN_PB}</p>
 		  <h3>Nội dung</h3>
@@ -28,7 +30,9 @@ function getPhongBan(id) {
         knowledge += `
 		  <tr>
 			  <td>${res.KienThuc[i].TEN_KT} 
-				  <span id="icon${i + 1}" class="material-symbols-outlined">close</span>
+				  <span onclick="getIdphongban_XoaKT(${res.KienThuc[i].MA_KT})" id="kt_icon${
+          i + 1
+        }" class="material-symbols-outlined">close</span>
 			  </td>
 		  </tr>
 		  `;
@@ -41,7 +45,9 @@ function getPhongBan(id) {
         skill += `
 		  <tr>
 			  <td>${res.KiNang[i].TEN_KN} 
-				  <span id="icon${i + 1}" class="material-symbols-outlined">close</span>
+				  <span onclick="getIdphongban_XoaKN(${res.KiNang[i].MA_KN})" id="kn_icon${
+          i + 1
+        }" class="material-symbols-outlined">close</span>
 			  </td>
 		  </tr>
 		  `;

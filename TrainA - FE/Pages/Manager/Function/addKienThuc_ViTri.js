@@ -1,16 +1,16 @@
-function getIdphongban_KT() {
-  var phongban = $(`#example`).val();
-  if (typeof phongban === "undefined") {
-    alert("Vui lòng chọn phòng ban để thêm kiến thức");
+function getIdvitri_KT() {
+  var vitri = $(`#example`).val();
+  if (typeof vitri === "undefined") {
+    alert("Vui lòng chọn vị trí công việc để thêm kiến thức");
   } else {
-    var apiURL1 = "https://localhost:5001/api/phongban/themkienthuc/";
-    console.log("Phong ban id: ", phongban);
+    var apiURL1 = "https://localhost:5001/api/vitri/themkienthuc/";
+    console.log("Vi tri id: ", vitri);
     var e = document.getElementById("kien_thuc_form");
     var kienthuc = e.value;
     console.log("Kien thuc add: ", kienthuc);
     $.ajax({
       type: "POST",
-      url: apiURL1 + phongban,
+      url: apiURL1 + vitri,
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -21,12 +21,12 @@ function getIdphongban_KT() {
         console.log("Da thuc hien");
       },
     });
-    // var apiURL = "https://localhost:5001/api/phongban/chitiet/" + phongban;
+    // var apiURL = "https://localhost:5001/api/vitri/chitiet/" + vitri;
     // const resolve1 = await $.ajax({
     //   method: "GET",
     //   url: apiURL,
     //   success: function (res) {
-    //     console.log("Reload chi tiet Phong ban: ", res);
+    //     console.log("Reload chi tiet Vi tri: ", res);
     //     var knowledge = "";
     //     for (let i = 0; i < res.KienThuc.length; i++) {
     //       knowledge += `

@@ -20,6 +20,8 @@
 	<script src="Function\filterSearch_phongban.js"></script>
 	<script src="Function\addKienThuc_PhongBan.js"></script>
 	<script src="Function\addKiNang_PhongBan.js"></script>
+	<script src="Function\removeKienThuc_PhongBan.js"></script>
+	<script src="Function\removeKiNang_PhongBan.js"></script>
     <div class="nav_bar">
         <ul>
           <li><a href="khoahoc.html">Khóa học</a></li>
@@ -75,7 +77,7 @@
 				<h3>Tên phòng ban</h3>
 				<h3>Mô tả</h3>
 			</div>
-			<div class="kien_thuc_editable_table">
+			<div class="kien_thuc_editable_table_phong_ban">
 				<div class="text-box">
 					Kiến thức <button class="add_kien_thuc_btn" href="#" id="pop_up_add_kienthuc" onclick="openForm()"> <i class="material-symbols-outlined">
 						edit_note
@@ -99,7 +101,7 @@
 					</tr>
 				</table>
 			</div>
-			<div class="ky_nang_editable_table">
+			<div class="ky_nang_editable_table_phong_ban">
 				<div class="text-box">
 					Kỹ năng <button class="add_ky_nang_btn" href="#"id="pop_up_add_kynang" onclick="openForm1()"> <i class="material-symbols-outlined">
 						edit_note
@@ -125,7 +127,7 @@
 			</div>
 		</div>
 		
-		<div class="Member_table_list">
+		<div class="Member_table_list_phong_ban">
 			<h1>Danh sách nhân viên</h1>
 			<table>  
 				<tr>
@@ -136,38 +138,38 @@
 			</table> 
 			<script>
 				function openForm() {
+					var size = $(`#kt_length`).val();
 					console.log(document.getElementById("form1").style.display);
   					document.getElementById("form1").style.display = "inline-block";
-					  document.getElementById("icon1").style.display = "inline-block";
-					  document.getElementById("icon2").style.display = "inline-block";
-					  document.getElementById("icon3").style.display = "inline-block";
-					  document.getElementById("icon4").style.display = "inline-block";
+					for(let i = 0; i <= size; i++){
+						document.getElementById("kt_icon"+ i + "").style.display = "inline-block";
 					}
+				}
 
 				function closeForm() {
+					var size = $(`#kt_length`).val();
   					document.getElementById("form1").style.display = "none";
-					  document.getElementById("icon1").style.display = "none";
-					  document.getElementById("icon2").style.display = "none";
-					  document.getElementById("icon3").style.display = "none";
-					  document.getElementById("icon4").style.display = "none";
-					
-					}
-					function openForm1() {
+					  for(let i = 0; i < size; i++){
+					  document.getElementById("kt_icon" + i + "").style.display = "none";
+					  }
+				}
+
+				function openForm1() {
+					var size = $(`#kn_length`).val();
 					console.log(document.getElementById("form2").style.display);
   					document.getElementById("form2").style.display = "inline-block";
-					  document.getElementById("icon6").style.display = "inline-block";
-					  document.getElementById("icon5").style.display = "inline-block";
-					  document.getElementById("icon7").style.display = "inline-block";
-					  document.getElementById("icon8").style.display = "inline-block";
+					for(let i = 0; i < size; i++){
+						document.getElementById("kn_icon"+ i + "").style.display = "inline-block";
 					}
+				}
 
 				function closeForm1() {
-  					document.getElementById("form2").style.display = "none";
-					  document.getElementById("icon6").style.display = "none";
-					  document.getElementById("icon5").style.display = "none";
-					  document.getElementById("icon7").style.display = "none";
-					  document.getElementById("icon8").style.display = "none";
+					var size = $(`#kn_length`).val();
+					document.getElementById("form2").style.display = "none";
+					for(let i = 0; i < size; i++){
+					document.getElementById("kn_icon" + i + "").style.display = "none";
 					}
+				}
 			</script>
 </body>
 </html>

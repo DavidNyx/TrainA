@@ -21,29 +21,29 @@ function getIdDuAn_KN() {
         console.log("Da thuc hien");
       },
     });
-    var apiURL = "https://localhost:5001/api/duan/chitiet/" + duan;
-    $.ajax({
-      method: "GET",
-      url: apiURL,
-      success: function (res) {
-        console.log("Reload chi tiet du an: ", res);
-        var knowledge = "";
-        for (let i = 0; i < res.KiNang.length; i++) {
-          skill += `
-					<tr>
-						<td>${res.KiNang[i].TEN_KN}
-							<span id="icon${i + 1}" class="material-symbols-outlined">close</span>
-						</td>
-					</tr>
-					`;
-          console.log("Reaload danh sach Ky nang: ", res.KiNang[i]);
-        }
-        $(`#skill_list`).empty();
-        $(`#skill_list`).append(knowledge);
-      },
-      error: function (err) {
-        console.log("error", err);
-      },
-    });
+    // var apiURL = "https://localhost:5001/api/duan/chitiet/" + duan;
+    // const resolve1 = await $.ajax({
+    //   method: "GET",
+    //   url: apiURL,
+    //   success: function (res) {
+    //     console.log("Reload chi tiet du an: ", res);
+    //     var knowledge = "";
+    //     for (let i = 0; i < res.KiNang.length; i++) {
+    //       skill += `
+	// 				<tr>
+	// 					<td>${res.KiNang[i].TEN_KN}
+	// 						<span id="icon${i + 1}" class="material-symbols-outlined">close</span>
+	// 					</td>
+	// 				</tr>
+	// 				`;
+    //       console.log("Reaload danh sach Ky nang: ", res.KiNang[i]);
+    //     }
+    //     $(`#skill_list`).empty();
+    //     $(`#skill_list`).append(knowledge);
+    //   },
+    //   error: function (err) {
+    //     console.log("error", err);
+    //   },
+    // });
   }
 }
